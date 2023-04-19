@@ -27,7 +27,7 @@ public class GameInput : MonoBehaviour
     public Vector2 GetMovementVector2Normalized()
     {
         Vector2 inputVector = playerInput.Player.Movement.ReadValue<Vector2>();
-        inputVector = inputVector.normalized;
+        inputVector = inputVector.normalized;                                   //normalize for smooth movement
 
         return inputVector;
     }
