@@ -399,6 +399,7 @@ GameObject:
   - component: {fileID: 1410390036}
   - component: {fileID: 1410390035}
   - component: {fileID: 1410390038}
+  - component: {fileID: 1410390039}
   m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
@@ -420,6 +421,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameInput: {fileID: 2106707633}
   movementSpeed: 1
+  caster: {fileID: 1410390037}
+  projectile: {fileID: 1749308838999186616, guid: 9642ffd21cffb894083329c6350c1535, type: 3}
 --- !u!212 &1410390036
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -532,6 +535,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1410390039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1410390034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03722a0f4fa0eb34ca3ae3db3d58662f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2106707632
 GameObject:
   m_ObjectHideFlags: 0

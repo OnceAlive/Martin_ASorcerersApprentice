@@ -21,4 +21,9 @@ public class GameInput : MonoBehaviour
         
         return new Vector3(inputVector.x, inputVector.y, 0);
     }
+
+    public bool ShootButtonPressed()
+    {
+        return playerInput.Player.shoot.IsPressed();
+    }
 }
