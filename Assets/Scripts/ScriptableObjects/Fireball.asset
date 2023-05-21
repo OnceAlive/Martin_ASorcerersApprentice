@@ -15,3 +15,4 @@ MonoBehaviour:
   spellPrefab: {fileID: 6566516529837196565, guid: 29ffc2686c04d7c4080b8c78a6b6e3cd, type: 3}
   spellCooldown: 1
   spellDamage: 1
+  spellRange: 2

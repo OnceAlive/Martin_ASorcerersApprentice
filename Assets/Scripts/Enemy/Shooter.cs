@@ -5,22 +5,17 @@ using UnityEngine;
 public class Shooter : MonoBehaviour, IEnemy
 {
     [SerializeField] private GameObject bullet;
-    [SerializeField] private CircleCollider2D range;
-    [SerializeField] private float bulletMoveSpeed;
-    [SerializeField] private int burstCount;
-    [SerializeField] private float timeBetweenBursts;
-    [SerializeField] private float restTime = 1f;
 
     private bool isShooting = false;
 
     public void Shoot()
     {
-        if(!isShooting)
-        {
-            StartCoroutine(shootRoutine());
-        }
-    }
+        Vector2 targetDirection = Player.INSTANCE.transform.position - transform.position;
 
+        GameObject newBullet = Instantiate(bullet, transform.position, Quaternion.identity);
+        newBullet.transform.right = targetDirection;
+    }
+    /*
     private IEnumerator shootRoutine()
     {
         isShooting=true;
@@ -43,5 +38,5 @@ public class Shooter : MonoBehaviour, IEnemy
 
         yield return new WaitForSeconds(restTime);
         isShooting = false;
-    }
+    }*/
 }

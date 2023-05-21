@@ -9,6 +9,7 @@ public class Fireball : MonoBehaviour, ISpell
     public void Attack()
     {
         GameObject newFireball = Instantiate(fireball, fireballSpawnPoint.position, fireballSpawnPoint.rotation);
+        newFireball.GetComponent<Projectile>().UpdateProjectileRange(spellInfo.spellRange);
     }
 
     public SpellInfo GetSpellInfo()
