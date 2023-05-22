@@ -33,7 +33,8 @@ public class Projectile : MonoBehaviour
         {
             if((player && isEnemyProjectile) || (enemyHealth && !isEnemyProjectile))
             {
-                player.TakeDamage(1, transform);
+                enemyHealth?.TakeDamage(1);
+                player?.TakeDamage(1, transform);
                 Destroy(gameObject);
             }
 
