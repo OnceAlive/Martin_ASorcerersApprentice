@@ -120,8 +120,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04da5652e127b784b8552ead226f2b56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roamChangeDirectionFloat: 2
-  attackRange: 5
+  roamChangeDirectionFloat: 0.5
+  attackRange: 1
   enemyType: {fileID: 8556478090138119846}
   cooldownTime: 1
 --- !u!114 &6394919223652077304

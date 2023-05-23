@@ -5,8 +5,8 @@ using UnityEngine.Rendering;
 
 public class EnemyAI : MonoBehaviour
 {
-    [SerializeField] private float roamChangeDirectionFloat = 2f;
-    [SerializeField] private float attackRange = 5f;
+    [SerializeField] private float roamChangeDirectionFloat = .5f;
+    [SerializeField] private float attackRange = 1f;
     [SerializeField] private MonoBehaviour enemyType;
     [SerializeField] private float cooldownTime = 1f;
 
@@ -79,7 +79,13 @@ public class EnemyAI : MonoBehaviour
             canAttack = false;
             (enemyType as IEnemy).Shoot();
             StartCoroutine(AttackCooldownRoutine());
+            float distance = Vector2.Distance(transform.position, Player.INSTANCE.transform.position);
+            if (distance > attackRange)
+            {
+                state = State.ROAMING;
+            }
         }
+
     }
 
     private IEnumerator AttackCooldownRoutine()
