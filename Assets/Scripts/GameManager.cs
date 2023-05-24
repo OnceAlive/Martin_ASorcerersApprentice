@@ -1,10 +1,11 @@
 using System.IO;
+using UnityEngine;
 
 class GameManager : MonoBehaviour
 {
     public GameManager INSTANCE;
 
-    private static const string PATH = "";
+    private const string PATH = "";
     
     private void Awake()
     {
