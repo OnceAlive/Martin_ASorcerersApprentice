@@ -6,11 +6,10 @@ public class ActiveSpell : MonoBehaviour
     public static ActiveSpell INSTANCE;
 
     [SerializeField] private MonoBehaviour currentActiveSpell;
-
-    private PlayerInput playerInput;
-    private bool attackButtonPressed;
+    
     private bool isAttacking = false;
     private float timeBetweenAttacks;
+    private GameInput gameInput;
 
     private void Awake()
     {
@@ -18,22 +17,14 @@ public class ActiveSpell : MonoBehaviour
         {
             INSTANCE = this;
         }
-
-        playerInput = new PlayerInput();
+        
         timeBetweenAttacks = (currentActiveSpell as ISpell).GetSpellInfo().spellCooldown;
     }
-
-    private void OnEnable()
-    {
-        playerInput.Enable();
-    }
-
+    
     private void Start()
     {
-        playerInput.Combat.Attack.started += _ => attackButtonPressed = true;
-        playerInput.Combat.Attack.canceled += _ => attackButtonPressed = false;
-
         AttackCooldown();
+        gameInput = GameObject.FindGameObjectWithTag(Tags.T_GameInput).GetComponent<GameInput>();
     }
 
     private void Update()
@@ -63,7 +54,7 @@ public class ActiveSpell : MonoBehaviour
 
     private void Attack()
     {
-        if(attackButtonPressed && !isAttacking)
+        if(gameInput.GetAttackButtonPressed() && !isAttacking)
         {
             AttackCooldown();
 

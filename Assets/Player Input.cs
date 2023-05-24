@@ -35,6 +35,33 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""attack"",
+                    ""type"": ""Button"",
+                    ""id"": ""d28544e1-c42d-42c2-9190-f9ef8fb012f3"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""inventory_keyboard"",
+                    ""type"": ""Value"",
+                    ""id"": ""47f4bac4-8120-48af-a5ce-a5f050e0c957"",
+                    ""expectedControlType"": ""Integer"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""mouse_position"",
+                    ""type"": ""Value"",
+                    ""id"": ""760db41c-f35b-4638-bbf2-cbf37fce574e"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -158,104 +185,92 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""action"": ""move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
-                }
-            ]
-        },
-        {
-            ""name"": ""Inventory"",
-            ""id"": ""f60cd534-019e-40d2-bfc3-234a5cf1d496"",
-            ""actions"": [
-                {
-                    ""name"": ""Keyboard"",
-                    ""type"": ""Value"",
-                    ""id"": ""285eccc0-d837-40bc-a8a4-7a1b95b0fc07"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": true
-                }
-            ],
-            ""bindings"": [
-                {
-                    ""name"": """",
-                    ""id"": ""d2541c64-9f01-4596-b922-f6ef7e2c1051"",
-                    ""path"": ""<Keyboard>/1"",
-                    ""interactions"": """",
-                    ""processors"": ""Scale"",
-                    ""groups"": """",
-                    ""action"": ""Keyboard"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""5aabd388-722e-469a-b5b1-cd3f6c8cb172"",
-                    ""path"": ""<Keyboard>/2"",
-                    ""interactions"": """",
-                    ""processors"": ""Scale(factor=2)"",
-                    ""groups"": """",
-                    ""action"": ""Keyboard"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""e83b2123-42b1-4269-b7a2-4e03a5865c7f"",
-                    ""path"": ""<Keyboard>/3"",
-                    ""interactions"": """",
-                    ""processors"": ""Scale(factor=3)"",
-                    ""groups"": """",
-                    ""action"": ""Keyboard"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""1df35547-51c4-44b4-b933-e3963bb56758"",
-                    ""path"": ""<Keyboard>/4"",
-                    ""interactions"": """",
-                    ""processors"": ""Scale(factor=4)"",
-                    ""groups"": """",
-                    ""action"": ""Keyboard"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""849d5029-6205-4dd0-8373-4c03c2333ee7"",
-                    ""path"": ""<Keyboard>/5"",
-                    ""interactions"": """",
-                    ""processors"": ""Scale(factor=5)"",
-                    ""groups"": """",
-                    ""action"": ""Keyboard"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                }
-            ]
-        },
-        {
-            ""name"": ""Combat"",
-            ""id"": ""b0db5a71-2a39-4a1b-8193-b3b057829fb0"",
-            ""actions"": [
-                {
-                    ""name"": ""Attack"",
-                    ""type"": ""Button"",
-                    ""id"": ""28497193-1fa6-4516-8819-2b64071ce002"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                }
-            ],
-            ""bindings"": [
-                {
-                    ""name"": """",
-                    ""id"": ""6ebc79b7-89d0-470b-b530-f62ad060f33e"",
+                    ""id"": ""b43723eb-f65d-488f-9778-5d05bb123006"",
                     ""path"": ""<Mouse>/leftButton"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Attack"",
+                    ""action"": ""attack"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0f18851d-c5d9-4a36-9d85-ce0d54f579e5"",
+                    ""path"": ""<Gamepad>/rightTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""attack"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a055f091-a8ce-48d0-ad24-93262cb7ad59"",
+                    ""path"": ""<Keyboard>/1"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""inventory_keyboard"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a88414e6-3ee9-4b1d-8869-a242901678dd"",
+                    ""path"": ""<Keyboard>/2"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""inventory_keyboard"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""bfa25cbf-c1b5-4e8f-9845-b2737181b5eb"",
+                    ""path"": ""<Keyboard>/3"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""inventory_keyboard"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a0161e96-756a-47c2-a0c2-4c9e57451fb1"",
+                    ""path"": ""<Keyboard>/4"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""inventory_keyboard"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9ca4da80-fad1-4f91-bb87-baeecd974947"",
+                    ""path"": ""<Keyboard>/5"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""inventory_keyboard"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b46b260d-5884-4efb-918a-200dbb0e2d19"",
+                    ""path"": ""<Mouse>/position"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""mouse_position"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -267,12 +282,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         // Player
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_move = m_Player.FindAction("move", throwIfNotFound: true);
-        // Inventory
-        m_Inventory = asset.FindActionMap("Inventory", throwIfNotFound: true);
-        m_Inventory_Keyboard = m_Inventory.FindAction("Keyboard", throwIfNotFound: true);
-        // Combat
-        m_Combat = asset.FindActionMap("Combat", throwIfNotFound: true);
-        m_Combat_Attack = m_Combat.FindAction("Attack", throwIfNotFound: true);
+        m_Player_attack = m_Player.FindAction("attack", throwIfNotFound: true);
+        m_Player_inventory_keyboard = m_Player.FindAction("inventory_keyboard", throwIfNotFound: true);
+        m_Player_mouse_position = m_Player.FindAction("mouse_position", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -335,11 +347,17 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Player;
     private List<IPlayerActions> m_PlayerActionsCallbackInterfaces = new List<IPlayerActions>();
     private readonly InputAction m_Player_move;
+    private readonly InputAction m_Player_attack;
+    private readonly InputAction m_Player_inventory_keyboard;
+    private readonly InputAction m_Player_mouse_position;
     public struct PlayerActions
     {
         private @PlayerInput m_Wrapper;
         public PlayerActions(@PlayerInput wrapper) { m_Wrapper = wrapper; }
         public InputAction @move => m_Wrapper.m_Player_move;
+        public InputAction @attack => m_Wrapper.m_Player_attack;
+        public InputAction @inventory_keyboard => m_Wrapper.m_Player_inventory_keyboard;
+        public InputAction @mouse_position => m_Wrapper.m_Player_mouse_position;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -352,6 +370,15 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @move.started += instance.OnMove;
             @move.performed += instance.OnMove;
             @move.canceled += instance.OnMove;
+            @attack.started += instance.OnAttack;
+            @attack.performed += instance.OnAttack;
+            @attack.canceled += instance.OnAttack;
+            @inventory_keyboard.started += instance.OnInventory_keyboard;
+            @inventory_keyboard.performed += instance.OnInventory_keyboard;
+            @inventory_keyboard.canceled += instance.OnInventory_keyboard;
+            @mouse_position.started += instance.OnMouse_position;
+            @mouse_position.performed += instance.OnMouse_position;
+            @mouse_position.canceled += instance.OnMouse_position;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -359,6 +386,15 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @move.started -= instance.OnMove;
             @move.performed -= instance.OnMove;
             @move.canceled -= instance.OnMove;
+            @attack.started -= instance.OnAttack;
+            @attack.performed -= instance.OnAttack;
+            @attack.canceled -= instance.OnAttack;
+            @inventory_keyboard.started -= instance.OnInventory_keyboard;
+            @inventory_keyboard.performed -= instance.OnInventory_keyboard;
+            @inventory_keyboard.canceled -= instance.OnInventory_keyboard;
+            @mouse_position.started -= instance.OnMouse_position;
+            @mouse_position.performed -= instance.OnMouse_position;
+            @mouse_position.canceled -= instance.OnMouse_position;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -376,108 +412,11 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         }
     }
     public PlayerActions @Player => new PlayerActions(this);
-
-    // Inventory
-    private readonly InputActionMap m_Inventory;
-    private List<IInventoryActions> m_InventoryActionsCallbackInterfaces = new List<IInventoryActions>();
-    private readonly InputAction m_Inventory_Keyboard;
-    public struct InventoryActions
-    {
-        private @PlayerInput m_Wrapper;
-        public InventoryActions(@PlayerInput wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Keyboard => m_Wrapper.m_Inventory_Keyboard;
-        public InputActionMap Get() { return m_Wrapper.m_Inventory; }
-        public void Enable() { Get().Enable(); }
-        public void Disable() { Get().Disable(); }
-        public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(InventoryActions set) { return set.Get(); }
-        public void AddCallbacks(IInventoryActions instance)
-        {
-            if (instance == null || m_Wrapper.m_InventoryActionsCallbackInterfaces.Contains(instance)) return;
-            m_Wrapper.m_InventoryActionsCallbackInterfaces.Add(instance);
-            @Keyboard.started += instance.OnKeyboard;
-            @Keyboard.performed += instance.OnKeyboard;
-            @Keyboard.canceled += instance.OnKeyboard;
-        }
-
-        private void UnregisterCallbacks(IInventoryActions instance)
-        {
-            @Keyboard.started -= instance.OnKeyboard;
-            @Keyboard.performed -= instance.OnKeyboard;
-            @Keyboard.canceled -= instance.OnKeyboard;
-        }
-
-        public void RemoveCallbacks(IInventoryActions instance)
-        {
-            if (m_Wrapper.m_InventoryActionsCallbackInterfaces.Remove(instance))
-                UnregisterCallbacks(instance);
-        }
-
-        public void SetCallbacks(IInventoryActions instance)
-        {
-            foreach (var item in m_Wrapper.m_InventoryActionsCallbackInterfaces)
-                UnregisterCallbacks(item);
-            m_Wrapper.m_InventoryActionsCallbackInterfaces.Clear();
-            AddCallbacks(instance);
-        }
-    }
-    public InventoryActions @Inventory => new InventoryActions(this);
-
-    // Combat
-    private readonly InputActionMap m_Combat;
-    private List<ICombatActions> m_CombatActionsCallbackInterfaces = new List<ICombatActions>();
-    private readonly InputAction m_Combat_Attack;
-    public struct CombatActions
-    {
-        private @PlayerInput m_Wrapper;
-        public CombatActions(@PlayerInput wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Attack => m_Wrapper.m_Combat_Attack;
-        public InputActionMap Get() { return m_Wrapper.m_Combat; }
-        public void Enable() { Get().Enable(); }
-        public void Disable() { Get().Disable(); }
-        public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(CombatActions set) { return set.Get(); }
-        public void AddCallbacks(ICombatActions instance)
-        {
-            if (instance == null || m_Wrapper.m_CombatActionsCallbackInterfaces.Contains(instance)) return;
-            m_Wrapper.m_CombatActionsCallbackInterfaces.Add(instance);
-            @Attack.started += instance.OnAttack;
-            @Attack.performed += instance.OnAttack;
-            @Attack.canceled += instance.OnAttack;
-        }
-
-        private void UnregisterCallbacks(ICombatActions instance)
-        {
-            @Attack.started -= instance.OnAttack;
-            @Attack.performed -= instance.OnAttack;
-            @Attack.canceled -= instance.OnAttack;
-        }
-
-        public void RemoveCallbacks(ICombatActions instance)
-        {
-            if (m_Wrapper.m_CombatActionsCallbackInterfaces.Remove(instance))
-                UnregisterCallbacks(instance);
-        }
-
-        public void SetCallbacks(ICombatActions instance)
-        {
-            foreach (var item in m_Wrapper.m_CombatActionsCallbackInterfaces)
-                UnregisterCallbacks(item);
-            m_Wrapper.m_CombatActionsCallbackInterfaces.Clear();
-            AddCallbacks(instance);
-        }
-    }
-    public CombatActions @Combat => new CombatActions(this);
     public interface IPlayerActions
     {
         void OnMove(InputAction.CallbackContext context);
-    }
-    public interface IInventoryActions
-    {
-        void OnKeyboard(InputAction.CallbackContext context);
-    }
-    public interface ICombatActions
-    {
         void OnAttack(InputAction.CallbackContext context);
+        void OnInventory_keyboard(InputAction.CallbackContext context);
+        void OnMouse_position(InputAction.CallbackContext context);
     }
 }

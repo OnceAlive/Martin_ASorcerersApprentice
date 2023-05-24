@@ -4,10 +4,14 @@ public class ActiveIventory : MonoBehaviour
 {
     [SerializeField] private PlayerInput playerInput;
     private int activeSlotIndexNumber = 0;
+    private GameInput gameInput;
 
     private void Start()
     {
-        playerInput.Inventory.Keyboard.performed += ctx => ToggleActiveSlot((int)ctx.ReadValue<float>() - 1);
+        gameInput = GameObject.FindGameObjectWithTag(Tags.T_GameInput).GetComponent<GameInput>();
+        
+        //TODO: switch to game input
+        //playerInput.Inventory.Keyboard.performed += ctx => ToggleActiveSlot((int)ctx.ReadValue<float>() - 1);
     }
 
     private void ToggleActiveSlot(int number)
