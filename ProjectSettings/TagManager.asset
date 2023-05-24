@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - GameInput
   layers:
   - Default
   - TransparentFX
@@ -40,4 +41,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Floor
+    uniqueID: 2510876881
+    locked: 0
+  - name: Wall_Back
+    uniqueID: 758877205
+    locked: 0
+  - name: Actor
+    uniqueID: 3186417071
+    locked: 0
+  - name: Wall_Front
+    uniqueID: 2595281175
     locked: 0

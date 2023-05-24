@@ -21,4 +21,22 @@ public class GameInput : MonoBehaviour
         
         return new Vector3(inputVector.x, inputVector.y, 0);
     }
+    
+    public bool GetAttackButtonPressed()
+    {
+        return playerInput.Player.attack.triggered;
+    }
+
+    public Vector3 GetMousePosition()
+    {
+        Vector2 mousePosition = playerInput.Player.mouse_position.ReadValue<Vector2>();
+        
+        return new Vector3(mousePosition.x, mousePosition.y, 0);
+    }
+    
+    public bool GetInventorySlotNumber()
+    {
+        //TODO: implement
+        return false; //placeholder
+    }
 }
