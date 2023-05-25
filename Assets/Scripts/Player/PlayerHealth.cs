@@ -33,6 +33,16 @@ public class PlayerHealth : MonoBehaviour
             TakeDamage(1, collision.gameObject.transform);
         }
     }
+    
+    public int GetCurrentHealth()
+    {
+        return currentHealth;
+    }
+    
+    public int GetMaxHealth()
+    {
+        return maxHealth;
+    }
 
     public void TakeDamage(int damageAmount, Transform hitTransform)
     {
