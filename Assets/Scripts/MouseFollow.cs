@@ -5,6 +5,7 @@ using UnityEngine;
 public class MouseFollow : MonoBehaviour
 {
     private GameInput gameInput;
+    [SerializeField] private Transform playerTransform;
     
     private void Awake()
     {
@@ -22,6 +23,14 @@ public class MouseFollow : MonoBehaviour
         mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
 
         Vector2 direction = transform.position - mousePosition;
+        if(direction.x < 0)
+        {
+            playerTransform.localScale = new Vector3(1, 1, 1);
+        }
+        else
+        {
+            playerTransform.localScale = new Vector3(-1, 1, 1);
+        }
 
         transform.right = -direction;
     }
