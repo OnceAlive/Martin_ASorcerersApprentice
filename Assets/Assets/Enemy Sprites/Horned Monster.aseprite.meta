@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3a20930ad22c7d24baf29686e66272e2
+guid: 7acd62e9219a79e4da845abbbc3f6c39
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -95,7 +95,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638201919408116301
+  platformSettingsDirtyTick: 638233065518915601
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -130,7 +130,7 @@ ScriptedImporter:
       y: 4
       width: 23
       height: 32
-    spriteID: ee94f4c88bb617e4192e572703da9c35
+    spriteID: fb069c20c31adc44c963224d805c0c70
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -155,12 +155,13 @@ ScriptedImporter:
         y: 0
         width: 23
         height: 32
-      spriteId: ee94f4c88bb617e4192e572703da9c35
+      spriteId: fb069c20c31adc44c963224d805c0c70
     linkedCells: []
     parentIndex: -1
   platformSettings:
   - name: DefaultTexturePlatform
     overridden: 0
+    ignorePlatformSupport: 0
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -172,6 +173,7 @@ ScriptedImporter:
     androidETC2FallbackOverride: 0
   - name: Standalone
     overridden: 0
+    ignorePlatformSupport: 0
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -183,6 +185,7 @@ ScriptedImporter:
     androidETC2FallbackOverride: 0
   - name: Server
     overridden: 0
+    ignorePlatformSupport: 0
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1

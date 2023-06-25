@@ -1,25 +1,25 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class Flash : MonoBehaviour
 {
     [SerializeField] private Material flashMaterial;
-    [SerializeField] private float restoreDefaultMaterialTime = .2f;
-    [SerializeField] private SpriteRenderer martinRenderer;
+    [SerializeField] private SpriteRenderer spriteRenderer;
     
     private Material defaultMaterial;
-
-    public float GetRestoreDefaultMaterialTime => restoreDefaultMaterialTime;
-
+    
+    public float restoreDefaultMaterialTime { get; private set; } = .2f;
+    
     private void Awake()
     {
-        defaultMaterial = martinRenderer.material;
+        defaultMaterial = spriteRenderer.material;
     }
 
     public IEnumerator FlashRoutine()
     {
-        martinRenderer.material = flashMaterial;
+        spriteRenderer.material = flashMaterial;
         yield return new WaitForSeconds(restoreDefaultMaterialTime);
-        martinRenderer.material = defaultMaterial;
+        spriteRenderer.material = defaultMaterial;
     }
 }
