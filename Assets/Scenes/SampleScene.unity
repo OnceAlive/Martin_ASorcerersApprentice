@@ -8830,6 +8830,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Horned Monster
       objectReference: {fileID: 0}
+    - target: {fileID: 3243987366427304186, guid: f01f8f81f85f1b64d953140de1efcf99, type: 3}
+      propertyPath: attackRange
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4014605406500318653, guid: f01f8f81f85f1b64d953140de1efcf99, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -8879,8 +8883,32 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8556478090138119846, guid: f01f8f81f85f1b64d953140de1efcf99, type: 3}
+      propertyPath: stagger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8556478090138119846, guid: f01f8f81f85f1b64d953140de1efcf99, type: 3}
+      propertyPath: restTime
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8556478090138119846, guid: f01f8f81f85f1b64d953140de1efcf99, type: 3}
+      propertyPath: oscillate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8556478090138119846, guid: f01f8f81f85f1b64d953140de1efcf99, type: 3}
+      propertyPath: burstCount
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8556478090138119846, guid: f01f8f81f85f1b64d953140de1efcf99, type: 3}
+      propertyPath: startingDistance
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8556478090138119846, guid: f01f8f81f85f1b64d953140de1efcf99, type: 3}
+      propertyPath: timeBetweenBursts
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8556478090138119846, guid: f01f8f81f85f1b64d953140de1efcf99, type: 3}
       propertyPath: projectilesPerBurst
-      value: 20
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

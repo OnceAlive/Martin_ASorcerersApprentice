@@ -12,6 +12,8 @@ public class Shooter : MonoBehaviour, IEnemy
     [SerializeField] private float startingDistance = .1f;
     [SerializeField] private float timeBetweenBursts;
     [SerializeField] private float restTime = 1f;
+    [SerializeField] private bool stagger;
+    [SerializeField] private bool oscillate;
 
     private bool isShooting = false;
     private GameObject target;
@@ -32,11 +34,32 @@ public class Shooter : MonoBehaviour, IEnemy
     private IEnumerator ShootRoutine()
     {
         isShooting=true;
+        float timeBetweenProjectiles = stagger ? timeBetweenBursts / projectilesPerBurst : 0f;
         
-        TargetConeOfInfluence(out float startAngle, out float currentAngle, out float angleStep);
+        TargetConeOfInfluence(out float startAngle, out float currentAngle, out float angleStep, out float endAngle);
 
         for(int i = 0; i < burstCount; i++)
         {
+            if (!oscillate)
+            {
+                TargetConeOfInfluence(out startAngle, out currentAngle, out angleStep, out endAngle);
+            }
+
+            if (oscillate && i % 2 != 1)
+            {
+                TargetConeOfInfluence(out startAngle, out currentAngle, out angleStep, out endAngle);
+            }
+            else
+            {
+                if (oscillate)
+                {
+                    currentAngle = endAngle;
+                    endAngle = startAngle;
+                    startAngle = currentAngle;
+                    angleStep *= -1;
+                }
+            }
+            
             for (int j = 0; j < projectilesPerBurst; j++)
             {
                 Vector2 position = FindBulletSpawnPosition(currentAngle);
@@ -50,26 +73,33 @@ public class Shooter : MonoBehaviour, IEnemy
                 }
 
                 currentAngle += angleStep;
+
+                if (stagger)
+                {
+                    yield return new WaitForSeconds(timeBetweenProjectiles);
+                }
             }
 
             currentAngle = startAngle;
 
-            yield return new WaitForSeconds(timeBetweenBursts);
-            TargetConeOfInfluence(out startAngle, out currentAngle, out angleStep);
+            if (!stagger)
+            {
+                yield return new WaitForSeconds(timeBetweenBursts);   
+            }
         }
         
         yield return new WaitForSeconds(restTime);
         isShooting = false;
     }
 
-    private void TargetConeOfInfluence(out float startAngle, out float currentAngle, out float angleStep)
+    private void TargetConeOfInfluence(out float startAngle, out float currentAngle, out float angleStep, out float endAngle)
     {
         Vector2 targetDirection = target.transform.position
                                   - this.transform.position;
 
         float targetAngle = Mathf.Atan2(targetDirection.y, targetDirection.x) * Mathf.Rad2Deg;
         startAngle = targetAngle;
-        float endAngle = targetAngle;
+        endAngle = targetAngle;
         currentAngle = targetAngle;
         float halfAngleSpread = 0f;
         angleStep = 0f;
