@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 3906437821683885837}
   - component: {fileID: 8556478090138119846}
   m_Layer: 0
-  m_Name: Horned Monster
+  m_Name: Amazon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33,12 +33,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2842895043282327316}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &7416988467490194586
 Rigidbody2D:
@@ -135,7 +135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b471eeffd7004c419f059fa67a7846f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 1
+  moveSpeed: 0
 --- !u!61 &934173603464602773
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -171,8 +171,8 @@ BoxCollider2D:
   m_Offset: {x: 0.0035592318, y: 0.14172603}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.47826087, y: 0}
-    oldSize: {x: 0.23, y: 0.32}
+    pivot: {x: 0.5185185, y: 0}
+    oldSize: {x: 0.27, y: 0.32}
     newSize: {x: 0.23, y: 0.32}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -222,7 +222,7 @@ SpriteRenderer:
   m_SortingLayerID: -1108550225
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9053496704750910124, guid: 7acd62e9219a79e4da845abbbc3f6c39, type: 3}
+  m_Sprite: {fileID: -4065997943955879966, guid: 73aeefcef7c12fc408a45e240ed18f85, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -245,11 +245,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0327820557a7ea42b1b2f0101c95279, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 8989137105132784067, guid: 0b1062a9dce5f174b8185a43194a0c9a, type: 3}
+  bullet: {fileID: 8989137105132784067, guid: bdfdfe60c59bc4e48a817e9797e9da53, type: 3}
   bulletMoveSpeed: 1
   burstCount: 5
-  projectilesPerBurst: 6
-  angleSpread: 61
+  projectilesPerBurst: 1
+  angleSpread: 0
   startingDistance: 0.1
-  timeBetweenBursts: 0.3
-  restTime: 0.5
+  timeBetweenBursts: 0.5
+  restTime: 1
+  stagger: 0
+  oscillate: 0

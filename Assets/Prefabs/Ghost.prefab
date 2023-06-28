@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 3906437821683885837}
   - component: {fileID: 8556478090138119846}
   m_Layer: 0
-  m_Name: Horned Monster
+  m_Name: Ghost
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -171,8 +171,8 @@ BoxCollider2D:
   m_Offset: {x: 0.0035592318, y: 0.14172603}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.47826087, y: 0}
-    oldSize: {x: 0.23, y: 0.32}
+    pivot: {x: 0.51724136, y: -0.06896552}
+    oldSize: {x: 0.29, y: 0.29}
     newSize: {x: 0.23, y: 0.32}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -222,7 +222,7 @@ SpriteRenderer:
   m_SortingLayerID: -1108550225
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9053496704750910124, guid: 7acd62e9219a79e4da845abbbc3f6c39, type: 3}
+  m_Sprite: {fileID: -4056805464791658517, guid: bee5b2ccf287f5e4b9b2944e1dcaf3d8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -253,3 +253,5 @@ MonoBehaviour:
   startingDistance: 0.1
   timeBetweenBursts: 0.3
   restTime: 0.5
+  stagger: 1
+  oscillate: 1

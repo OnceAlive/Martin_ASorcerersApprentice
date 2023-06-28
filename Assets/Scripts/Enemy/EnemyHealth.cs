@@ -4,7 +4,7 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] private int startingHealth = 3;
-    [SerializeField] private Transform damageSource;
+    //[SerializeField] private Transform damageSource;
 
     private int currentHealth;
     private Knockback knockback;
@@ -24,14 +24,14 @@ public class EnemyHealth : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
-        knockback.GetKnockedBack(damageSource, 2f);
+        knockback.GetKnockedBack(GameObject.FindGameObjectWithTag(Tags.T_Player).transform, 2f);
         StartCoroutine(flash.FlashRoutine());
         StartCoroutine(CheckDetectDeath());
     }
 
     private IEnumerator CheckDetectDeath()
     {
-        yield return new WaitForSeconds(flash.GetRestoreDefaultMaterialTime);
+        yield return new WaitForSeconds(flash.restoreDefaultMaterialTime);
         detectDeath();
     }
 
