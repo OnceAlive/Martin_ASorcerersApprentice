@@ -45,6 +45,9 @@ TagManager:
   - name: Floor
     uniqueID: 2510876881
     locked: 0
+  - name: Floor_Overlay
+    uniqueID: 4238092379
+    locked: 0
   - name: Wall_Back
     uniqueID: 758877205
     locked: 0
