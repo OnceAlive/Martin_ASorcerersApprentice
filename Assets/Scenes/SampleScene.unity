@@ -7030,6 +7030,53 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &744584464
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 744584465}
+  - component: {fileID: 744584466}
+  m_Layer: 0
+  m_Name: Fireball
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &744584465
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 744584464}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1530958405}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &744584466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 744584464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 955585ff381062f4ca4c2a09ba931331, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireball: {fileID: 6566516529837196565, guid: 29ffc2686c04d7c4080b8c78a6b6e3cd, type: 3}
+  fireballSpawnPoint: {fileID: 11129061}
+  spellInfo: {fileID: 11400000, guid: e18d5f0b455afe14ba9c780e352e2449, type: 2}
 --- !u!1 &779757599
 GameObject:
   m_ObjectHideFlags: 0
@@ -8723,6 +8770,7 @@ GameObject:
   - component: {fileID: 984935435}
   - component: {fileID: 984935434}
   - component: {fileID: 984935433}
+  - component: {fileID: 984935438}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -8876,6 +8924,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flashMaterial: {fileID: 2100000, guid: f309788f306629e4bb1efa2435231cb1, type: 2}
   spriteRenderer: {fileID: 1762681332}
+--- !u!114 &984935438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 984935429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af8624d972b77e647b04c59ddc312ed4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spells:
+  - {fileID: 744584464}
+  - {fileID: 1748246093}
 --- !u!1 &1449567677
 GameObject:
   m_ObjectHideFlags: 0
@@ -8981,8 +9044,8 @@ Transform:
   m_LocalScale: {x: 0.16, y: 0.16, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1536402251}
   - {fileID: 1748246094}
+  - {fileID: 744584465}
   m_Father: {fileID: 984935430}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8998,54 +9061,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 656a21ae585567e4b9f2179414874cbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentActiveSpell: {fileID: 1748246095}
---- !u!1 &1536402250
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1536402251}
-  - component: {fileID: 1536402252}
-  m_Layer: 0
-  m_Name: Fireball
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1536402251
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1536402250}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1530958405}
-  m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1536402252
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1536402250}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 955585ff381062f4ca4c2a09ba931331, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fireball: {fileID: 6566516529837196565, guid: 29ffc2686c04d7c4080b8c78a6b6e3cd, type: 3}
-  fireballSpawnPoint: {fileID: 11129061}
-  spellInfo: {fileID: 11400000, guid: e18d5f0b455afe14ba9c780e352e2449, type: 2}
+  currentActiveSpell: {fileID: 744584466}
 --- !u!1001 &1549957748
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9339,7 +9355,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14613cfbc91186c44bbf44fa013ddc95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thunder: {fileID: 6566516529837196565, guid: 29ffc2686c04d7c4080b8c78a6b6e3cd, type: 3}
+  thunder: {fileID: 6566516529837196565, guid: 923479183d8a1bd46a803eb21c7bab9e, type: 3}
   thunderSpawnPoint: {fileID: 11129061}
   spellInfo: {fileID: 11400000, guid: fa05b974b0513114b85043730469d579, type: 2}
 --- !u!1001 &1762681330
