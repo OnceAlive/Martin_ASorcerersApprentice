@@ -60834,7 +60834,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5aacc8d7c9fde4763933075c390f1f19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookAt: {fileID: 0}
+  lookAt: {fileID: 1107574575}
   moveSpeed: 5
   boundX: 0.3
   boundY: 0.15
