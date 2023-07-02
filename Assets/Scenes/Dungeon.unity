@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 358433798}
   - component: {fileID: 358433800}
   - component: {fileID: 358433799}
+  - component: {fileID: 358433801}
   m_Layer: 6
   m_Name: Blocking
   m_TagString: Untagged
@@ -55387,6 +55388,42 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!19719996 &358433801
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 358433797}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0
+  m_UseDelaunayMesh: 0
 --- !u!1001 &583377030
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -55401,7 +55438,7 @@ PrefabInstance:
       objectReference: {fileID: 3338664676586349790, guid: 151584ea7e6344d3491a69fff2991178, type: 3}
     - target: {fileID: 793000786458866818, guid: da516d3ce0dde7b4980204279de04d00, type: 3}
       propertyPath: m_SortingLayer
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 793000786458866818, guid: da516d3ce0dde7b4980204279de04d00, type: 3}
       propertyPath: m_SortingOrder
@@ -98120,7 +98157,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1107574575}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.539, y: -0.012, z: 0}
+  m_LocalPosition: {x: 0.02, y: -0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -98187,7 +98224,7 @@ GameObject:
   - component: {fileID: 1143949099}
   - component: {fileID: 1143949101}
   - component: {fileID: 1143949100}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Staff_Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
