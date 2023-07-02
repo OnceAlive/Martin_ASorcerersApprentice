@@ -1,12 +1,12 @@
 fileFormatVersion: 2
-guid: 955585ff381062f4ca4c2a09ba931331
+guid: 14613cfbc91186c44bbf44fa013ddc95
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - fireball: {instanceID: 0}
-  - fireballSpawnPoint: {instanceID: 0}
-  - spellInfo: {fileID: 11400000, guid: e18d5f0b455afe14ba9c780e352e2449, type: 2}
+  - thunder: {instanceID: 0}
+  - thunderSpawnPoint: {instanceID: 0}
+  - spellInfo: {fileID: 11400000, guid: fa05b974b0513114b85043730469d579, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
