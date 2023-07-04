@@ -117030,6 +117030,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6138229503272890467, guid: 3e7f0af92f989324d9e039e8c507c0d5, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 8054884428113965160, guid: 3e7f0af92f989324d9e039e8c507c0d5, type: 3}
       propertyPath: gameInput
       value: 

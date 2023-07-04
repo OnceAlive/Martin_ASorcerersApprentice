@@ -50,22 +50,12 @@ public class Player : MonoBehaviour
         if (hit.collider == null)
         {
             transform.Translate(0, movementVector.y * (Time.deltaTime * movementSpeed), 0);
-            Debug.Log("Hit nothing y");
-        }
-        else
-        {
-            Debug.Log("Hit something y");
         }
 
         hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0, new Vector2(movementVector.x, 0), Mathf.Abs(movementVector.x * Time.deltaTime), LayerMask.GetMask("Actor", "Blocking"));
         if (hit.collider == null)
         {
             transform.Translate(movementVector.x * (Time.deltaTime * movementSpeed), 0, 0);
-            Debug.Log("Hit nothing x");
-        }
-        else
-        {
-            Debug.Log("Hit something x");
         }
 
         //transform.Translate(movementVector * (Time.deltaTime * movementSpeed));
