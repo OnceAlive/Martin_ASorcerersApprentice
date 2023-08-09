@@ -8,7 +8,9 @@ public class Player : MonoBehaviour
 
     [SerializeField] private GameInput gameInput;
     [SerializeField] private float movementSpeed;
-
+    [SerializeField] private float dashSpeed = 4f;
+    [SerializeField] private float dashTime = .2f;
+    
     private RaycastHit2D hit;
     private BoxCollider2D boxCollider;
 
@@ -19,6 +21,7 @@ public class Player : MonoBehaviour
     private void Start()
     {
         boxCollider = GetComponent<BoxCollider2D>();
+        gameInput.Dash.performed += _ => Dash();
     }
 
     private void Awake()
@@ -59,5 +62,17 @@ public class Player : MonoBehaviour
         }
 
         //transform.Translate(movementVector * (Time.deltaTime * movementSpeed));
+    }
+
+    private void Dash()
+    {
+        movementSpeed *= dashSpeed;
+        StartCoroutine(EndDashRoutine());
+    }
+
+    private IEnumerator EndDashRoutine()
+    {
+        yield return new WaitForSeconds(dashTime);
+        movementSpeed /= dashSpeed;
     }
 }

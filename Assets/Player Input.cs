@@ -62,6 +62,15 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""dash"",
+                    ""type"": ""Button"",
+                    ""id"": ""4e9cb929-477e-48a1-bb6d-8a323524b428"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -273,6 +282,17 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""action"": ""mouse_position"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a5308672-46e3-4e57-9c65-d4c629353fd5"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""dash"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -285,6 +305,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         m_Player_attack = m_Player.FindAction("attack", throwIfNotFound: true);
         m_Player_inventory_keyboard = m_Player.FindAction("inventory_keyboard", throwIfNotFound: true);
         m_Player_mouse_position = m_Player.FindAction("mouse_position", throwIfNotFound: true);
+        m_Player_dash = m_Player.FindAction("dash", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -350,6 +371,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_attack;
     private readonly InputAction m_Player_inventory_keyboard;
     private readonly InputAction m_Player_mouse_position;
+    private readonly InputAction m_Player_dash;
     public struct PlayerActions
     {
         private @PlayerInput m_Wrapper;
@@ -358,6 +380,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         public InputAction @attack => m_Wrapper.m_Player_attack;
         public InputAction @inventory_keyboard => m_Wrapper.m_Player_inventory_keyboard;
         public InputAction @mouse_position => m_Wrapper.m_Player_mouse_position;
+        public InputAction @dash => m_Wrapper.m_Player_dash;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -379,6 +402,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @mouse_position.started += instance.OnMouse_position;
             @mouse_position.performed += instance.OnMouse_position;
             @mouse_position.canceled += instance.OnMouse_position;
+            @dash.started += instance.OnDash;
+            @dash.performed += instance.OnDash;
+            @dash.canceled += instance.OnDash;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -395,6 +421,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @mouse_position.started -= instance.OnMouse_position;
             @mouse_position.performed -= instance.OnMouse_position;
             @mouse_position.canceled -= instance.OnMouse_position;
+            @dash.started -= instance.OnDash;
+            @dash.performed -= instance.OnDash;
+            @dash.canceled -= instance.OnDash;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -418,5 +447,6 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         void OnAttack(InputAction.CallbackContext context);
         void OnInventory_keyboard(InputAction.CallbackContext context);
         void OnMouse_position(InputAction.CallbackContext context);
+        void OnDash(InputAction.CallbackContext context);
     }
 }

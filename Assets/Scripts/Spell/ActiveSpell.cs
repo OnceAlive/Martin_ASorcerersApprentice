@@ -25,11 +25,7 @@ public class ActiveSpell : MonoBehaviour
     {
         AttackCooldown();
         gameInput = GameObject.FindGameObjectWithTag(Tags.T_GameInput).GetComponent<GameInput>();
-    }
-
-    private void Update()
-    {
-        Attack();
+        gameInput.Attack.performed += _ => Attack();
     }
 
     public void NewSpell(MonoBehaviour newSpell)
@@ -47,7 +43,7 @@ public class ActiveSpell : MonoBehaviour
 
     private void Attack()
     {
-        if(gameInput.GetAttackButtonPressed() && !isAttacking)
+        if(!isAttacking)
         {
             AttackCooldown();
 
