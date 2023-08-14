@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float movementSpeed;
     [SerializeField] private float dashSpeed = 4f;
     [SerializeField] private float dashTime = .2f;
+    [SerializeField] private float dashCooldown = 1.5f;
     
     private RaycastHit2D hit;
     private BoxCollider2D boxCollider;
@@ -17,6 +18,7 @@ public class Player : MonoBehaviour
     public static Player INSTANCE;
 
     private Knockback knockback;
+    private bool canDash = true;
 
     private void Start()
     {
@@ -66,6 +68,12 @@ public class Player : MonoBehaviour
 
     private void Dash()
     {
+        if (!canDash)
+        {
+            return;
+        }
+
+        canDash = false;
         movementSpeed *= dashSpeed;
         StartCoroutine(EndDashRoutine());
     }
@@ -74,5 +82,7 @@ public class Player : MonoBehaviour
     {
         yield return new WaitForSeconds(dashTime);
         movementSpeed /= dashSpeed;
+        yield return new WaitForSeconds(dashCooldown);
+        canDash = true;
     }
 }
