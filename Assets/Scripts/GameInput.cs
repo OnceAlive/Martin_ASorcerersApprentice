@@ -5,16 +5,21 @@ using UnityEngine.InputSystem;
 
 public class GameInput : MonoBehaviour
 {
-    private PlayerInput playerInput;
+    private static PlayerInput playerInput;
+
+    public InputAction Dash;
+    public InputAction Attack;
     
     // Start is called before the first frame update
     private void Awake()
     {
         playerInput = new PlayerInput();
         playerInput.Player.Enable();
+        
+        Dash = playerInput.Player.dash;
+        Attack = playerInput.Player.attack;
     }
     
-
     public Vector3 GetMovementVectorNormalized()
     {
         Vector2 inputVector = playerInput.Player.move.ReadValue<Vector2>();
@@ -23,11 +28,6 @@ public class GameInput : MonoBehaviour
         return new Vector3(inputVector.x, inputVector.y, 0);
     }
     
-    public bool GetAttackButtonPressed()
-    {
-        return playerInput.Player.attack.triggered;
-    }
-
     public Vector3 GetMousePosition()
     {
         Vector2 mousePosition = playerInput.Player.mouse_position.ReadValue<Vector2>();
