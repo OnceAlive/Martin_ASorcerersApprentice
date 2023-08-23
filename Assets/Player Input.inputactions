@@ -40,6 +40,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "dash",
+                    "type": "Button",
+                    "id": "4e9cb929-477e-48a1-bb6d-8a323524b428",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -249,6 +258,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "mouse_position",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a5308672-46e3-4e57-9c65-d4c629353fd5",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "dash",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
