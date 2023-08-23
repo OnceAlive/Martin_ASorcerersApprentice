@@ -25,9 +25,9 @@
                 },
                 {
                     "name": "inventory_keyboard",
-                    "type": "Button",
+                    "type": "Value",
                     "id": "47f4bac4-8120-48af-a5ce-a5f050e0c957",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
@@ -223,28 +223,6 @@
                     "path": "<Keyboard>/3",
                     "interactions": "",
                     "processors": "Scale(factor=3)",
-                    "groups": "",
-                    "action": "inventory_keyboard",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "a0161e96-756a-47c2-a0c2-4c9e57451fb1",
-                    "path": "<Keyboard>/4",
-                    "interactions": "",
-                    "processors": "Scale(factor=4)",
-                    "groups": "",
-                    "action": "inventory_keyboard",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "9ca4da80-fad1-4f91-bb87-baeecd974947",
-                    "path": "<Keyboard>/5",
-                    "interactions": "",
-                    "processors": "Scale(factor=5)",
                     "groups": "",
                     "action": "inventory_keyboard",
                     "isComposite": false,

@@ -9,6 +9,7 @@ public class GameInput : MonoBehaviour
 
     public InputAction Dash;
     public InputAction Attack;
+    public InputAction InventoryKeyboard;
     
     // Start is called before the first frame update
     private void Awake()
@@ -18,6 +19,7 @@ public class GameInput : MonoBehaviour
         
         Dash = playerInput.Player.dash;
         Attack = playerInput.Player.attack;
+        InventoryKeyboard = playerInput.Player.inventory_keyboard;
     }
     
     public Vector3 GetMovementVectorNormalized()
@@ -33,11 +35,5 @@ public class GameInput : MonoBehaviour
         Vector2 mousePosition = playerInput.Player.mouse_position.ReadValue<Vector2>();
         
         return new Vector3(mousePosition.x, mousePosition.y, 0);
-    }
-    
-    public bool GetInventorySlotNumber()
-    {
-        //TODO: implement
-        return false; //placeholder
     }
 }
