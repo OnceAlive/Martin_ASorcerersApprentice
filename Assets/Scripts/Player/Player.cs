@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UIElements;
 
 public class Player : MonoBehaviour
@@ -11,6 +12,8 @@ public class Player : MonoBehaviour
     [SerializeField] private float dashSpeed = 4f;
     [SerializeField] private float dashTime = .2f;
     [SerializeField] private float dashCooldown = 1.5f;
+    [SerializeField] private GameObject shield;
+    [SerializeField] private Transform spellSpawnPoint;
     
     private RaycastHit2D hit;
     private BoxCollider2D boxCollider;
@@ -24,6 +27,7 @@ public class Player : MonoBehaviour
     {
         boxCollider = GetComponent<BoxCollider2D>();
         gameInput.Dash.performed += _ => Dash();
+        gameInput.Defend.performed += _ => Defend();
     }
 
     private void Awake()
@@ -84,5 +88,16 @@ public class Player : MonoBehaviour
         movementSpeed /= dashSpeed;
         yield return new WaitForSeconds(dashCooldown);
         canDash = true;
+    }
+
+    private void Defend()
+    {
+        GameObject newShield = Instantiate(shield, spellSpawnPoint.position, spellSpawnPoint.rotation);
+        while (gameInput.Defend.enabled)
+        {
+            newShield.transform.position = spellSpawnPoint.position;
+            newShield.transform.rotation = spellSpawnPoint.rotation;
+        }
+        Destroy(newShield);
     }
 }
