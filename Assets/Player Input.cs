@@ -71,6 +71,15 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""defend"",
+                    ""type"": ""Button"",
+                    ""id"": ""78b3f1f3-807d-4896-b090-c32dedde825f"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -293,6 +302,28 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""action"": ""dash"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9bd62795-6e91-4b17-94ca-5e21da30d90c"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""defend"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9125c4e4-a8d4-4752-a479-4c4ce0e87ddf"",
+                    ""path"": ""<Gamepad>/leftTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""defend"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -306,6 +337,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         m_Player_inventory_keyboard = m_Player.FindAction("inventory_keyboard", throwIfNotFound: true);
         m_Player_mouse_position = m_Player.FindAction("mouse_position", throwIfNotFound: true);
         m_Player_dash = m_Player.FindAction("dash", throwIfNotFound: true);
+        m_Player_defend = m_Player.FindAction("defend", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -372,6 +404,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_inventory_keyboard;
     private readonly InputAction m_Player_mouse_position;
     private readonly InputAction m_Player_dash;
+    private readonly InputAction m_Player_defend;
     public struct PlayerActions
     {
         private @PlayerInput m_Wrapper;
@@ -381,6 +414,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         public InputAction @inventory_keyboard => m_Wrapper.m_Player_inventory_keyboard;
         public InputAction @mouse_position => m_Wrapper.m_Player_mouse_position;
         public InputAction @dash => m_Wrapper.m_Player_dash;
+        public InputAction @defend => m_Wrapper.m_Player_defend;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -405,6 +439,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @dash.started += instance.OnDash;
             @dash.performed += instance.OnDash;
             @dash.canceled += instance.OnDash;
+            @defend.started += instance.OnDefend;
+            @defend.performed += instance.OnDefend;
+            @defend.canceled += instance.OnDefend;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -424,6 +461,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @dash.started -= instance.OnDash;
             @dash.performed -= instance.OnDash;
             @dash.canceled -= instance.OnDash;
+            @defend.started -= instance.OnDefend;
+            @defend.performed -= instance.OnDefend;
+            @defend.canceled -= instance.OnDefend;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -448,5 +488,6 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         void OnInventory_keyboard(InputAction.CallbackContext context);
         void OnMouse_position(InputAction.CallbackContext context);
         void OnDash(InputAction.CallbackContext context);
+        void OnDefend(InputAction.CallbackContext context);
     }
 }

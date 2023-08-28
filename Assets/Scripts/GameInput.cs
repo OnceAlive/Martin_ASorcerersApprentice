@@ -9,6 +9,7 @@ public class GameInput : MonoBehaviour
 
     public InputAction Dash;
     public InputAction Attack;
+    public InputAction Defend;
     
     // Start is called before the first frame update
     private void Awake()
@@ -18,6 +19,7 @@ public class GameInput : MonoBehaviour
         
         Dash = playerInput.Player.dash;
         Attack = playerInput.Player.attack;
+        Defend = playerInput.Player.defend;
     }
     
     public Vector3 GetMovementVectorNormalized()
