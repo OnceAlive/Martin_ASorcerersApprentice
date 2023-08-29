@@ -1,25 +1,23 @@
 using UnityEngine;
 
-public class Thunder : MonoBehaviour, ISpell
+public class Shockwave : MonoBehaviour, ISpell
 {
-    [SerializeField] private GameObject thunder;
-    [SerializeField] private Transform thunderSpawnPoint;
+    [SerializeField] private GameObject shockwave;
+    [SerializeField] private Transform shockwaveSpawnPoint;
     [SerializeField] private SpellInfo spellInfo;
-
-    private const int numberOfProjectiles = 3;
-    private const float angleSpread = 45f;
+    
+    private const int numberOfProjectiles = 30;
+    private const float angleSpread = 360f;
     
     public void Attack()
     {
-        //GameObject newThunder = Instantiate(thunder, thunderSpawnPoint.position, thunderSpawnPoint.rotation);
-        //newThunder.GetComponent<Projectile>().UpdateProjectileRange(spellInfo.spellRange);
         TargetConeOfInfluence(out float startAngle, out float currentAngle, out float angleStep, out float endAngle);
         for (int j = 0; j < numberOfProjectiles; j++)
         {
             Vector2 position = FindBulletSpawnPosition(currentAngle);
-            GameObject newThunder = Instantiate(thunder, position, thunderSpawnPoint.rotation);
+            GameObject newThunder = Instantiate(shockwave, position, shockwaveSpawnPoint.rotation);
             newThunder.GetComponent<Projectile>().UpdateProjectileRange(spellInfo.spellRange);
-            newThunder.transform.right = newThunder.transform.position - thunderSpawnPoint.position;
+            newThunder.transform.right = newThunder.transform.position - shockwaveSpawnPoint.position;
 
             currentAngle += angleStep;
         }
@@ -32,7 +30,7 @@ public class Thunder : MonoBehaviour, ISpell
     
     private void TargetConeOfInfluence(out float startAngle, out float currentAngle, out float angleStep, out float endAngle)
     {
-        Vector2 targetDirection = thunderSpawnPoint.right;
+        Vector2 targetDirection = shockwaveSpawnPoint.right;
 
         float targetAngle = Mathf.Atan2(targetDirection.y, targetDirection.x) * Mathf.Rad2Deg;
         startAngle = targetAngle;
@@ -53,8 +51,8 @@ public class Thunder : MonoBehaviour, ISpell
     
     private Vector2 FindBulletSpawnPosition(float currentAngle)
     {
-        float x = thunderSpawnPoint.position.x + 0.1f * Mathf.Cos(currentAngle * Mathf.Deg2Rad);
-        float y = thunderSpawnPoint.position.y + 0.1f * Mathf.Sin(currentAngle * Mathf.Deg2Rad);
+        float x = shockwaveSpawnPoint.position.x + 0.1f * Mathf.Cos(currentAngle * Mathf.Deg2Rad);
+        float y = shockwaveSpawnPoint.position.y + 0.1f * Mathf.Sin(currentAngle * Mathf.Deg2Rad);
 
         return new Vector2(x, y);
     }
