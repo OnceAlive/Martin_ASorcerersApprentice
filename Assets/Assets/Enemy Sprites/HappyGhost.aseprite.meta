@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: bee5b2ccf287f5e4b9b2944e1dcaf3d8
+guid: a2955a89e151e994e9687c612a48396a
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -119,9 +119,9 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Ghost
+  - name: HappyGhost
     originalName: 
-    pivot: {x: 0.51724136, y: -0.06896552}
+    pivot: {x: 0.51724136, y: -0.3478261}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -129,8 +129,8 @@ ScriptedImporter:
       x: 4
       y: 4
       width: 29
-      height: 29
-    spriteID: f83c7206138a48c40a60f2f5d452ce6e
+      height: 23
+    spriteID: cdc3c09a46c3545449e141a0d58d5c76
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -142,20 +142,20 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -1798907869
-    name: Ghost
+    guid: -1079945157
+    name: HappyGhost
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Ghost
+    - name: HappyGhost
       frameIndex: 0
       cellRect:
         x: 1
-        y: 2
+        y: 8
         width: 29
-        height: 29
-      spriteId: f83c7206138a48c40a60f2f5d452ce6e
+        height: 23
+      spriteId: cdc3c09a46c3545449e141a0d58d5c76
     linkedCells: []
     parentIndex: -1
   platformSettings: []

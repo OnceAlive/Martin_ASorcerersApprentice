@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6ea817c79624f8e42905d773ae31a4f6
+guid: bee5b2ccf287f5e4b9b2944e1dcaf3d8
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -95,7 +95,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 0
+  platformSettingsDirtyTick: 638289162509484487
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -119,18 +119,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Schatten_transparenter
+  - name: AngryGhost
     originalName: 
-    pivot: {x: 0.45454547, y: -0.6666667}
+    pivot: {x: 0.51724136, y: -0.3478261}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 22
-      height: 6
-    spriteID: ee1435cce1bb8bf4badb8ee127515e81
+      width: 29
+      height: 23
+    spriteID: 780f1f1f50022e34181e25cbc53223f4
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -142,23 +142,59 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 1084161530
-    name: Schatten_transparenter
+    guid: -1641437582
+    name: AngryGhost
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Schatten_transparenter
+    - name: AngryGhost
       frameIndex: 0
       cellRect:
-        x: 6
-        y: 4
-        width: 22
-        height: 6
-      spriteId: ee1435cce1bb8bf4badb8ee127515e81
+        x: 1
+        y: 8
+        width: 29
+        height: 23
+      spriteId: 780f1f1f50022e34181e25cbc53223f4
     linkedCells: []
     parentIndex: -1
-  platformSettings: []
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Server
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 32, y: 32}
