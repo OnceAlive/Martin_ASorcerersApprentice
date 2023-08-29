@@ -1,19 +1,14 @@
+using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 
-public class Fireball : MonoBehaviour, ISpell
+public class Fireball : Spell
 {
     [SerializeField] private GameObject fireball;
-    [SerializeField] private Transform fireballSpawnPoint;
-    [SerializeField] private SpellInfo spellInfo;
-
-    public void Attack()
+   
+    public override void Attack()
     {
-        GameObject newFireball = Instantiate(fireball, fireballSpawnPoint.position, fireballSpawnPoint.rotation);
+        GameObject newFireball = Instantiate(fireball, spellSpawnPoint.position, spellSpawnPoint.rotation);
         newFireball.GetComponent<Projectile>().UpdateProjectileRange(spellInfo.spellRange);
-    }
-
-    public SpellInfo GetSpellInfo()
-    {
-        return spellInfo;
     }
 }

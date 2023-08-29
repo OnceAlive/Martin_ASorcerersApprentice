@@ -18,7 +18,7 @@ public class ActiveSpell : MonoBehaviour
             INSTANCE = this;
         }
         
-        timeBetweenAttacks = (currentActiveSpell as ISpell).GetSpellInfo().spellCooldown;
+        timeBetweenAttacks = (currentActiveSpell as Spell).GetSpellInfo().spellCooldown;
     }
     
     private void Start()
@@ -32,7 +32,7 @@ public class ActiveSpell : MonoBehaviour
     {
         currentActiveSpell = newSpell;
         AttackCooldown();
-        timeBetweenAttacks = (currentActiveSpell as ISpell).GetSpellInfo().spellCooldown;
+        timeBetweenAttacks = (currentActiveSpell as Spell).GetSpellInfo().spellCooldown;
     }
 
     private IEnumerator TimeBetweenAttacksRoutine()
@@ -47,7 +47,7 @@ public class ActiveSpell : MonoBehaviour
         {
             AttackCooldown();
 
-            (currentActiveSpell as ISpell).Attack();
+            (currentActiveSpell as Spell).Attack();
         }
     }
 
