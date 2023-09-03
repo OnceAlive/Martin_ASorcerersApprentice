@@ -78,8 +78,10 @@ public class Player : MonoBehaviour
 
     private IEnumerator EndDashRoutine()
     {
+        GetComponent<BoxCollider2D>().enabled = false;
         yield return new WaitForSeconds(dashTime);
         movementSpeed /= dashSpeed;
+        GetComponent<BoxCollider2D>().enabled = true;
         yield return new WaitForSeconds(dashCooldown);
         canDash = true;
     }
