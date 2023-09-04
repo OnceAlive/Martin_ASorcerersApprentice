@@ -48,11 +48,17 @@ TagManager:
   - name: Floor_Overlay
     uniqueID: 4238092379
     locked: 0
+  - name: Wall_Top_Back
+    uniqueID: 2240747807
+    locked: 0
   - name: Wall_Back
     uniqueID: 758877205
     locked: 0
   - name: Actor
     uniqueID: 3186417071
+    locked: 0
+  - name: Wall_Top_Front
+    uniqueID: 2035379925
     locked: 0
   - name: Wall_Front
     uniqueID: 2595281175
