@@ -1,154 +1,7 @@
 fileFormatVersion: 2
 guid: 8501e10b1eafde34586080ba342fdc0e
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: 21300000
-    second: TX Shadow Chest
-  - first:
-      213: 21300002
-    second: TX Shadow Cube
-  - first:
-      213: 21300004
-    second: TX Shadow Crate
-  - first:
-      213: 21300006
-    second: TX Shadow Crate Small
-  - first:
-      213: 21300008
-    second: TX Shadow Chest Opened
-  - first:
-      213: 21300010
-    second: TX Shadow Rune Pillar X2
-  - first:
-      213: 21300012
-    second: TX Shadow Rune Pillar X3
-  - first:
-      213: 21300014
-    second: TX Shadow Rune Pillar Broken
-  - first:
-      213: 21300016
-    second: TX Shadow Tileset Wall 3
-  - first:
-      213: 21300018
-    second: TX Shadow Tileset Wall 2
-  - first:
-      213: 21300020
-    second: TX Shadow Tileset Wall 1
-  - first:
-      213: 21300022
-    second: TX Shadow Barrel
-  - first:
-      213: 21300024
-    second: TX Shadow Gravestone A
-  - first:
-      213: 21300026
-    second: TX Shadow Gravestone C
-  - first:
-      213: 21300028
-    second: TX Shadow Gravestone B
-  - first:
-      213: 21300030
-    second: TX Shadow Tree T3
-  - first:
-      213: 21300032
-    second: TX Shadow Tileset Wall 5
-  - first:
-      213: 21300034
-    second: TX Shadow Tileset Wall 4
-  - first:
-      213: 21300036
-    second: TX Shadow Stone Coffin Vert
-  - first:
-      213: 21300038
-    second: TX Shadow Stone Coffin Hori
-  - first:
-      213: 21300040
-    second: TX Shadow Bush T6
-  - first:
-      213: 21300042
-    second: TX Shadow Road Sign E
-  - first:
-      213: 21300044
-    second: TX Shadow Road Sign W
-  - first:
-      213: 21300046
-    second: TX Shadow Pot A
-  - first:
-      213: 21300048
-    second: TX Shadow Pot B
-  - first:
-      213: 21300050
-    second: TX Shadow Pot C
-  - first:
-      213: 21300052
-    second: TX Shadow Stone Bench S
-  - first:
-      213: 21300054
-    second: TX Shadow Stone Bench W
-  - first:
-      213: 21300056
-    second: TX Shadow Stone Bench E
-  - first:
-      213: 21300058
-    second: TX Shadow Stone T1
-  - first:
-      213: 21300060
-    second: TX Shadow Stone T2
-  - first:
-      213: 21300062
-    second: TX Shadow Stone T3
-  - first:
-      213: 21300064
-    second: TX Shadow Stone T4
-  - first:
-      213: 21300066
-    second: TX Shadow Stone T5
-  - first:
-      213: 21300068
-    second: TX Shadow Stone T6
-  - first:
-      213: 21300070
-    second: TX Shadow Statue
-  - first:
-      213: 21300072
-    second: TX Shadow Stone Lantern
-  - first:
-      213: 21300074
-    second: TX Shadow Bridge Gate
-  - first:
-      213: 21300076
-    second: TX Shadow Pillar
-  - first:
-      213: 21300078
-    second: TX Shadow Pillar Broken
-  - first:
-      213: 21300080
-    second: TX Shadow Tree T1
-  - first:
-      213: 21300082
-    second: TX Shadow Tree T2
-  - first:
-      213: 21300084
-    second: TX Shadow Stone Cube
-  - first:
-      213: 21300086
-    second: TX Shadow Bush T1
-  - first:
-      213: 21300088
-    second: TX Shadow Bush T5
-  - first:
-      213: 21300090
-    second: TX Shadow Bush T2
-  - first:
-      213: 21300092
-    second: TX Shadow Bush T4
-  - first:
-      213: 21300094
-    second: TX Shadow Bush T3
-  - first:
-      213: 21300096
-    second: TX Shadow Altar
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -210,9 +63,9 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
-  applyGammaDecoding: 1
+  applyGammaDecoding: 0
   swizzle: 50462976
-  cookieLightType: 1
+  cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -224,20 +77,22 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: 4
+    textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
-    overridden: 1
+    overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Server
     maxTextureSize: 2048
@@ -248,196 +103,617 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TX Shadow Tree T3
+      name: TX Shadow Plant_0
       rect:
         serializedVersion: 2
-        x: 48
-        y: 360
-        width: 86
-        height: 52
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 57
+        y: 402
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0fb913af1a3cab246b51f84e61e9a6b0
-      internalID: 21300030
+      spriteID: 6605dac8fbbd38841abf62e56c8df9ec
+      internalID: -560088438
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Shadow Bush T6
+      name: TX Shadow Plant_1
       rect:
         serializedVersion: 2
-        x: 348
-        y: 285
-        width: 41
-        height: 29
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 89
+        y: 402
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4bb2cc55da069424e8aff94284d57aed
-      internalID: 21300040
+      spriteID: 51f0a0f793dd2154892040c5c5785e84
+      internalID: 820717452
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Shadow Tree T1
+      name: TX Shadow Plant_2
       rect:
         serializedVersion: 2
-        x: 304
-        y: 361
-        width: 74
-        height: 40
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 25
+        y: 370
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f8168048d08df164a8bbb2e9aadc5db2
-      internalID: 21300080
+      spriteID: 2338dbd7b4a80964c9c624bd8153f8c1
+      internalID: 939730949
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Shadow Tree T2
+      name: TX Shadow Plant_3
       rect:
         serializedVersion: 2
-        x: 172
-        y: 361
-        width: 83
-        height: 46
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 57
+        y: 370
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 32229d5ef376e3342b25600dfcc4aadd
-      internalID: 21300082
+      spriteID: 5a66fb10418286f4cbba08f08ca5eed4
+      internalID: 1925707937
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Shadow Bush T1
+      name: TX Shadow Plant_4
       rect:
         serializedVersion: 2
-        x: 39
-        y: 293
-        width: 22
-        height: 12
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 89
+        y: 370
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4829c4186c54a4d4aa79288537bd6803
-      internalID: 21300086
+      spriteID: 1543f326edfa9684cad37d3f31f01ddb
+      internalID: -1454138532
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Shadow Bush T5
+      name: TX Shadow Plant_5
       rect:
         serializedVersion: 2
-        x: 285
-        y: 279
-        width: 38
-        height: 24
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 121
+        y: 370
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 75d0ea0c6c657374bae51f6cf2af4057
-      internalID: 21300088
+      spriteID: 8c253096e8b31394e851b46f7c76d771
+      internalID: 519302055
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Shadow Bush T2
+      name: TX Shadow Plant_6
       rect:
         serializedVersion: 2
-        x: 99
-        y: 290
-        width: 28
-        height: 17
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 25
+        y: 338
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7417a256143eb114b9430a9897a56774
-      internalID: 21300090
+      spriteID: 69fdd6e7cfcbc87498ef93851035ff17
+      internalID: -570712746
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Shadow Bush T4
+      name: TX Shadow Plant_7
       rect:
         serializedVersion: 2
-        x: 220
-        y: 283
-        width: 48
-        height: 24
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 57
+        y: 338
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba47d8abd25e4a74d994a7b3c9a96e2e
-      internalID: 21300092
+      spriteID: de28823b90af74640996b51963df4632
+      internalID: -41123354
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Shadow Bush T3
+      name: TX Shadow Plant_8
       rect:
         serializedVersion: 2
-        x: 160
-        y: 289
-        width: 37
-        height: 17
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 89
+        y: 338
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3653b1c6dac6bef46bacba0646cb3204
-      internalID: 21300094
+      spriteID: d69a4223734ba6b48b6fa24cfc7cfd7e
+      internalID: -256950583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Shadow Plant_9
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 338
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bf9027eb8f9b7e428154c0cabf92548
+      internalID: -889341523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Shadow Plant_10
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 403
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84a6018a0fb1e24488b7d9ca876982fd
+      internalID: -866556088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Shadow Plant_11
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 371
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2df5cca12c87fe43bd05ed6da9989d9
+      internalID: 1789260562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Shadow Plant_12
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 371
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9da55567a46dded44b9f434ef981ae1b
+      internalID: 1417125716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Shadow Plant_13
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 371
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d17d9440177b3934b91f08d4f24cf484
+      internalID: 1581325688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Shadow Plant_14
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 339
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d70368c892741ec40bc8bba8c2c816f3
+      internalID: 597172396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Shadow Plant_15
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 339
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84b23087e14bfcc4c80d94bb6dcaf237
+      internalID: -1670955812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Shadow Plant_16
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 339
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 872c11989b731c146a0942877998270e
+      internalID: 1672915096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Shadow Plant_17
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 386
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 788fb6ff10939a44db29d8c2df1f3fee
+      internalID: -1227240418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Shadow Plant_18
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 386
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6317abfccbe9a6d43a5aa400de5b436a
+      internalID: -625590520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Shadow Plant_19
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 386
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4929c43f1b65c44388d080ccd69404e
+      internalID: -1279205816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Shadow Plant_20
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 354
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b7fce2fd2280f3438ad8399d2f1101f
+      internalID: 666558163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Shadow Plant_21
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 354
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78d4f7cd1d3bb694eaff1488579cb66d
+      internalID: -1594366007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Shadow Plant_22
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 354
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 578b9dff91e37c34b965247a99e87974
+      internalID: -1777806418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Shadow Plant_23
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 291
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.25, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f79dff0074d3cb41932e4c4c5b1d3d8
+      internalID: 1737832714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Shadow Plant_24
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 288
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.28125, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5a6811ae07994c478a9a3fa382d6e95
+      internalID: 478694880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Shadow Plant_25
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 286
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.25, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 854ae0f83bbd2204e9704fb8734c4ac7
+      internalID: -2092522582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Shadow Plant_26
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 286
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.25, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebe5bf5ae7a0aaa4d85b5ffa080f30e2
+      internalID: -712172815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Shadow Plant_27
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 281
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.25, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7ddd258e7692e74e9f3e39c9d3fa0ef
+      internalID: -1437163374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Shadow Plant_28
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 281
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.25, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b5f6bc6bc15d7f498b8d3a8928d5515
+      internalID: -169016241
       vertices: []
       indices: 
       edges: []
@@ -445,7 +721,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 901f89b6ee1d4c64cb2963d1fac91fa4
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -453,15 +729,35 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      TX Shadow Bush T1: 21300086
-      TX Shadow Bush T2: 21300090
-      TX Shadow Bush T3: 21300094
-      TX Shadow Bush T4: 21300092
-      TX Shadow Bush T5: 21300088
-      TX Shadow Bush T6: 21300040
-      TX Shadow Tree T1: 21300080
-      TX Shadow Tree T2: 21300082
-      TX Shadow Tree T3: 21300030
+      TX Shadow Plant_0: -560088438
+      TX Shadow Plant_1: 820717452
+      TX Shadow Plant_10: -866556088
+      TX Shadow Plant_11: 1789260562
+      TX Shadow Plant_12: 1417125716
+      TX Shadow Plant_13: 1581325688
+      TX Shadow Plant_14: 597172396
+      TX Shadow Plant_15: -1670955812
+      TX Shadow Plant_16: 1672915096
+      TX Shadow Plant_17: -1227240418
+      TX Shadow Plant_18: -625590520
+      TX Shadow Plant_19: -1279205816
+      TX Shadow Plant_2: 939730949
+      TX Shadow Plant_20: 666558163
+      TX Shadow Plant_21: -1594366007
+      TX Shadow Plant_22: -1777806418
+      TX Shadow Plant_23: 1737832714
+      TX Shadow Plant_24: 478694880
+      TX Shadow Plant_25: -2092522582
+      TX Shadow Plant_26: -712172815
+      TX Shadow Plant_27: -1437163374
+      TX Shadow Plant_28: -169016241
+      TX Shadow Plant_3: 1925707937
+      TX Shadow Plant_4: -1454138532
+      TX Shadow Plant_5: 519302055
+      TX Shadow Plant_6: -570712746
+      TX Shadow Plant_7: -41123354
+      TX Shadow Plant_8: -256950583
+      TX Shadow Plant_9: -889341523
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
