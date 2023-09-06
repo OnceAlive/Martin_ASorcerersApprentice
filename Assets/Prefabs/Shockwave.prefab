@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4343773286765897067}
   - component: {fileID: 3028873240469589737}
   m_Layer: 0
-  m_Name: Bullet
+  m_Name: Shockwave
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33,7 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1338375034898589148
 SpriteRenderer:
@@ -55,7 +55,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bf84206efcf6b644c8bc92a708ca2c36, type: 2}
+  - {fileID: 2100000, guid: 137fc2613de627b46b97a36df0b08c76, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -163,4 +163,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectileSpeed: 2
   projectileRange: 10
-  isEnemyProjectile: 1
+  isEnemyProjectile: 0

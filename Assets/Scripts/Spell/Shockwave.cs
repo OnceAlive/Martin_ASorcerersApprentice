@@ -1,11 +1,11 @@
 using UnityEngine;
 
-public class Thunder : Spell
+public class Shockwave : Spell
 {
-    [SerializeField] private GameObject thunder;
-
-    private const int numberOfProjectiles = 3;
-    private const float angleSpread = 45f;
+    [SerializeField] private GameObject shockwave;
+    
+    private const int numberOfProjectiles = 30;
+    private const float angleSpread = 360f;
 
     public override void Attack()
     {
@@ -14,12 +14,11 @@ public class Thunder : Spell
         for (int j = 0; j < numberOfProjectiles; j++)
         {
             Vector2 position = FindBulletSpawnPosition(currentAngle);
-            GameObject newThunder = Instantiate(thunder, position, spellSpawnPoint.rotation);
+            GameObject newThunder = Instantiate(shockwave, position, spellSpawnPoint.rotation);
             newThunder.GetComponent<Projectile>().UpdateProjectileRange(spellInfo.spellRange);
             newThunder.transform.right = newThunder.transform.position - spellSpawnPoint.position;
 
             currentAngle += angleStep;
         }
     }
-    
 }
