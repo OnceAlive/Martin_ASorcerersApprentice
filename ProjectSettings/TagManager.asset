@@ -57,6 +57,12 @@ TagManager:
   - name: Wall_Back
     uniqueID: 758877205
     locked: 0
+  - name: Props (Back)
+    uniqueID: 2705346321
+    locked: 0
+  - name: Props (Back_Overlay)
+    uniqueID: 2143100691
+    locked: 0
   - name: Actor
     uniqueID: 3186417071
     locked: 0
@@ -65,4 +71,7 @@ TagManager:
     locked: 0
   - name: Wall_Front
     uniqueID: 2595281175
+    locked: 0
+  - name: Props (Front)
+    uniqueID: 3500764699
     locked: 0
