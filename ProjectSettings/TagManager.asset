@@ -72,6 +72,9 @@ TagManager:
   - name: Wall_Front
     uniqueID: 2595281175
     locked: 0
+  - name: Props (Shadow Top)
+    uniqueID: 249640089
+    locked: 0
   - name: Props (Front)
     uniqueID: 3500764699
     locked: 0
