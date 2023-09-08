@@ -217,7 +217,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 758877205
-  m_SortingLayer: 3
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 8800493467716128611, guid: 6ea817c79624f8e42905d773ae31a4f6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -275,7 +275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spellInfo: {fileID: 11400000, guid: fa05b974b0513114b85043730469d579, type: 2}
-  spellSpawnPoint: {fileID: 0}
+  spellSpawnPoint: {fileID: 1969310271333010034}
   thunder: {fileID: 6566516529837196565, guid: 923479183d8a1bd46a803eb21c7bab9e, type: 3}
 --- !u!1 &5409806628044202150
 GameObject:
@@ -322,7 +322,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spellInfo: {fileID: 11400000, guid: e18d5f0b455afe14ba9c780e352e2449, type: 2}
-  spellSpawnPoint: {fileID: 0}
+  spellSpawnPoint: {fileID: 1969310271333010034}
   fireball: {fileID: 6566516529837196565, guid: 29ffc2686c04d7c4080b8c78a6b6e3cd, type: 3}
 --- !u!1 &6138229503272890467
 GameObject:
@@ -526,7 +526,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3626916397498700004, guid: 92d167fbc578145d5aa11447d77fa736, type: 3}
       propertyPath: m_SortingLayer
-      value: 4
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3626916397498700004, guid: 92d167fbc578145d5aa11447d77fa736, type: 3}
       propertyPath: m_SortingLayerID
@@ -605,7 +605,7 @@ PrefabInstance:
       objectReference: {fileID: 3338664676586349790, guid: 151584ea7e6344d3491a69fff2991178, type: 3}
     - target: {fileID: 793000786458866818, guid: da516d3ce0dde7b4980204279de04d00, type: 3}
       propertyPath: m_SortingLayer
-      value: 4
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 793000786458866818, guid: da516d3ce0dde7b4980204279de04d00, type: 3}
       propertyPath: m_SortingOrder
@@ -736,6 +736,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da516d3ce0dde7b4980204279de04d00, type: 3}
+--- !u!4 &1969310271333010034 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5996755990964076357, guid: da516d3ce0dde7b4980204279de04d00, type: 3}
+  m_PrefabInstance: {fileID: 5218727003130098999}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6103387713072896529 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2080436831337279270, guid: da516d3ce0dde7b4980204279de04d00, type: 3}

@@ -12,16 +12,18 @@ public class PlayerHealth : MonoBehaviour
 
     private Knockback knockback;
     private Flash flash;
-
+    
+    private void Start()
+    {
+        GameObject player = GameObject.FindGameObjectWithTag(Tags.T_Player);     
+        Physics2D.IgnoreCollision(player.GetComponent<Collider2D>(), GameObject.FindGameObjectWithTag(Tags.T_MonsterBlocker).GetComponent<Collider2D>());
+        currentHealth = maxHealth;
+    }
+    
     private void Awake()
     {
         knockback = GetComponent<Knockback>();
         flash = GetComponent<Flash>();
-    }
-
-    private void Start()
-    {
-        currentHealth = maxHealth;
     }
 
     private void OnCollisionStay2D(Collision2D collision)
