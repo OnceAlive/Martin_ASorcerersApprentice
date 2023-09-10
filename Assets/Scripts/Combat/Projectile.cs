@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Projectile : MonoBehaviour
@@ -8,22 +9,28 @@ public class Projectile : MonoBehaviour
     
     private Vector2 startPosition;
     
-
-    // Start is called before the first frame update
     void Start()
     {
         this.startPosition = this.transform.position;
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
         MoveProjectile();
         DetectFireDistance();
     }
 
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        Destroy(gameObject);
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.CompareTag(Tags.T_Blocker))
+        {
+            Destroy(gameObject);
+        }
         EnemyHealth enemyHealth = collision.gameObject.GetComponent<EnemyHealth>();
         PlayerHealth player = collision.gameObject.GetComponent<PlayerHealth>();
 

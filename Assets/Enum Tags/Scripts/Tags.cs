@@ -8,4 +8,6 @@ public const string T_MainCamera = @"MainCamera";
 public const string T_Player = @"Player";
 public const string T_GameController = @"GameController";
 public const string T_GameInput = @"GameInput";
+public const string T_MonsterBlocker = @"MonsterBlocker";
+public const string T_Blocker = @"Blocker";
 }
