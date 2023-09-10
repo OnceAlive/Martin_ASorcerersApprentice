@@ -1,15 +1,21 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class ActiveSpell : MonoBehaviour
 {
     public static ActiveSpell INSTANCE;
+    
+    [SerializeField] private GameObject[] spells;
+    private int activeSlotIndexNumber = 0;
 
     [SerializeField] private MonoBehaviour currentActiveSpell;
     
     private bool isAttacking = false;
     private float timeBetweenAttacks;
-    private GameInput gameInput;
+
+    private float spellIndex;
+    //private GameInput gameInput;
 
     private void Awake()
     {
@@ -24,8 +30,22 @@ public class ActiveSpell : MonoBehaviour
     private void Start()
     {
         AttackCooldown();
-        gameInput = GameObject.FindGameObjectWithTag(Tags.T_GameInput).GetComponent<GameInput>();
-        gameInput.Attack.performed += _ => Attack();
+    }
+
+    public void OnSpellChangeRequest(InputAction.CallbackContext context)
+    {
+        spellIndex = context.ReadValue<float>() - 1;
+        ToggleActiveSlot((int) spellIndex);
+    }
+    
+    public void ToggleActiveSlot(int number)
+    {
+        ChangeActiveSpell((MonoBehaviour)spells[number].GetComponent(typeof(MonoBehaviour)));
+    }
+    
+    private void ChangeActiveSpell(MonoBehaviour spell)
+    {
+        NewSpell(spell);
     }
 
     public void NewSpell(MonoBehaviour newSpell)
@@ -41,7 +61,7 @@ public class ActiveSpell : MonoBehaviour
         isAttacking = false;
     }
 
-    private void Attack()
+    public void Attack()
     {
         if(!isAttacking)
         {
