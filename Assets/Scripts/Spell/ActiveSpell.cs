@@ -15,8 +15,7 @@ public class ActiveSpell : MonoBehaviour
     private float timeBetweenAttacks;
 
     private float spellIndex;
-    //private GameInput gameInput;
-
+    
     private void Awake()
     {
         if(INSTANCE == null)
@@ -63,6 +62,11 @@ public class ActiveSpell : MonoBehaviour
 
     public void Attack()
     {
+        if (PauseMenu.IsPaused)
+        {
+            return;
+        }
+        
         if(!isAttacking)
         {
             AttackCooldown();
