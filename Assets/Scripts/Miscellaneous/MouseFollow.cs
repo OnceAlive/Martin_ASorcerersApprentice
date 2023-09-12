@@ -3,17 +3,16 @@ using UnityEngine.InputSystem;
 
 public class MouseFollow : MonoBehaviour
 {
-    //private GameInput gameInput;
     [SerializeField] private Transform playerTransform;
     private Vector3 mousePosition;
     
-    private void Awake()
-    {
-        //gameInput = GameObject.FindGameObjectWithTag(Tags.T_GameInput).GetComponent<GameInput>();
-    }
-    
     public void OnMouseMovement(InputAction.CallbackContext context)
     {
+        if (PauseMenu.IsPaused)
+        {
+            return;
+        }
+        
         mousePosition = context.ReadValue<Vector2>();
         FaceMouse();
     }
