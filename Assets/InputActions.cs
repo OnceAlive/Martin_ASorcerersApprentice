@@ -80,6 +80,33 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""close_game"",
+                    ""type"": ""Button"",
+                    ""id"": ""badb89ef-bbac-431f-98c2-8db0309d67fb"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""return_to_main"",
+                    ""type"": ""Button"",
+                    ""id"": ""13ee7874-19ce-44ba-bfc1-6f018e8956e8"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""reload"",
+                    ""type"": ""Button"",
+                    ""id"": ""b4c94818-161f-478b-aea3-85eff8df1ef7"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -313,6 +340,39 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""action"": ""attack"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8cb04ee4-a6e6-4695-a2db-e6c2346f4c04"",
+                    ""path"": ""<Keyboard>/x"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""close_game"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c6d99267-51dd-4f87-8fa5-90ae5e98cfd9"",
+                    ""path"": ""<Keyboard>/delete"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""return_to_main"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""cc8e165c-8129-45e2-80a7-1fa204612e77"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""reload"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -327,6 +387,9 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         m_Player_pause = m_Player.FindAction("pause", throwIfNotFound: true);
         m_Player_mouse_position = m_Player.FindAction("mouse_position", throwIfNotFound: true);
         m_Player_attack = m_Player.FindAction("attack", throwIfNotFound: true);
+        m_Player_close_game = m_Player.FindAction("close_game", throwIfNotFound: true);
+        m_Player_return_to_main = m_Player.FindAction("return_to_main", throwIfNotFound: true);
+        m_Player_reload = m_Player.FindAction("reload", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -394,6 +457,9 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_pause;
     private readonly InputAction m_Player_mouse_position;
     private readonly InputAction m_Player_attack;
+    private readonly InputAction m_Player_close_game;
+    private readonly InputAction m_Player_return_to_main;
+    private readonly InputAction m_Player_reload;
     public struct PlayerActions
     {
         private @InputActions m_Wrapper;
@@ -404,6 +470,9 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         public InputAction @pause => m_Wrapper.m_Player_pause;
         public InputAction @mouse_position => m_Wrapper.m_Player_mouse_position;
         public InputAction @attack => m_Wrapper.m_Player_attack;
+        public InputAction @close_game => m_Wrapper.m_Player_close_game;
+        public InputAction @return_to_main => m_Wrapper.m_Player_return_to_main;
+        public InputAction @reload => m_Wrapper.m_Player_reload;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -431,6 +500,15 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
             @attack.started += instance.OnAttack;
             @attack.performed += instance.OnAttack;
             @attack.canceled += instance.OnAttack;
+            @close_game.started += instance.OnClose_game;
+            @close_game.performed += instance.OnClose_game;
+            @close_game.canceled += instance.OnClose_game;
+            @return_to_main.started += instance.OnReturn_to_main;
+            @return_to_main.performed += instance.OnReturn_to_main;
+            @return_to_main.canceled += instance.OnReturn_to_main;
+            @reload.started += instance.OnReload;
+            @reload.performed += instance.OnReload;
+            @reload.canceled += instance.OnReload;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -453,6 +531,15 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
             @attack.started -= instance.OnAttack;
             @attack.performed -= instance.OnAttack;
             @attack.canceled -= instance.OnAttack;
+            @close_game.started -= instance.OnClose_game;
+            @close_game.performed -= instance.OnClose_game;
+            @close_game.canceled -= instance.OnClose_game;
+            @return_to_main.started -= instance.OnReturn_to_main;
+            @return_to_main.performed -= instance.OnReturn_to_main;
+            @return_to_main.canceled -= instance.OnReturn_to_main;
+            @reload.started -= instance.OnReload;
+            @reload.performed -= instance.OnReload;
+            @reload.canceled -= instance.OnReload;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -478,5 +565,8 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         void OnPause(InputAction.CallbackContext context);
         void OnMouse_position(InputAction.CallbackContext context);
         void OnAttack(InputAction.CallbackContext context);
+        void OnClose_game(InputAction.CallbackContext context);
+        void OnReturn_to_main(InputAction.CallbackContext context);
+        void OnReload(InputAction.CallbackContext context);
     }
 }

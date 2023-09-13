@@ -5,7 +5,10 @@ public class MenuButtons : MonoBehaviour
 {
     public void QuitGame()
     {
-        Application.Quit();
+        if (PauseMenu.IsPaused)
+        {
+            Application.Quit();   
+        }
     }
 
     public void OnClickPlay()
@@ -15,6 +18,9 @@ public class MenuButtons : MonoBehaviour
 
     public void ReturnToMainMenu()
     {
-        SceneManager.LoadScene("MainMenu");
+        if (PauseMenu.IsPaused)
+        {
+            SceneManager.LoadScene("Main_Menu");   
+        }
     }
 }
