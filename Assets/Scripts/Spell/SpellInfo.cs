@@ -3,7 +3,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "New Spell")]
 public class SpellInfo : ScriptableObject
 {
-    public GameObject spellPrefab;
+    public Sprite spellSprite;
     public float spellCooldown;
     public float spellDamage;
     public float spellRange;

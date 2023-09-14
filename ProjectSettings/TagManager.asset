@@ -7,6 +7,7 @@ TagManager:
   - GameInput
   - MonsterBlocker
   - Blocker
+  - DeathMenu
   layers:
   - Default
   - TransparentFX

@@ -80,33 +80,6 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""close_game"",
-                    ""type"": ""Button"",
-                    ""id"": ""badb89ef-bbac-431f-98c2-8db0309d67fb"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""return_to_main"",
-                    ""type"": ""Button"",
-                    ""id"": ""13ee7874-19ce-44ba-bfc1-6f018e8956e8"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""reload"",
-                    ""type"": ""Button"",
-                    ""id"": ""b4c94818-161f-478b-aea3-85eff8df1ef7"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -277,10 +250,43 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""9ca4da80-fad1-4f91-bb87-baeecd974947"",
-                    ""path"": ""<Keyboard>/5"",
+                    ""id"": ""470e9a1d-e607-4155-936f-f00e65497c55"",
+                    ""path"": ""<Gamepad>/dpad/up"",
                     ""interactions"": """",
-                    ""processors"": ""Scale(factor=5)"",
+                    ""processors"": ""Scale"",
+                    ""groups"": """",
+                    ""action"": ""inventory_keyboard"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""eb4486e2-17dd-43b4-9eaa-24b69ec51370"",
+                    ""path"": ""<Gamepad>/dpad/right"",
+                    ""interactions"": """",
+                    ""processors"": ""Scale(factor=2)"",
+                    ""groups"": """",
+                    ""action"": ""inventory_keyboard"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5c2d6cb9-a4a2-439a-b727-953199195c45"",
+                    ""path"": ""<Gamepad>/dpad/down"",
+                    ""interactions"": """",
+                    ""processors"": ""Scale(factor=3)"",
+                    ""groups"": """",
+                    ""action"": ""inventory_keyboard"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""70279e22-9180-4ca4-9d4e-35f89c0671f0"",
+                    ""path"": ""<Gamepad>/dpad/left"",
+                    ""interactions"": """",
+                    ""processors"": ""Scale(factor=4)"",
                     ""groups"": """",
                     ""action"": ""inventory_keyboard"",
                     ""isComposite"": false,
@@ -290,6 +296,17 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""name"": """",
                     ""id"": ""a5308672-46e3-4e57-9c65-d4c629353fd5"",
                     ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""dash"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0d1e6545-60d8-44f3-9e1d-fec6955bb811"",
+                    ""path"": ""<Gamepad>/buttonEast"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -310,8 +327,30 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""555c1bf5-ff33-490b-ba6b-956b0b51d08d"",
+                    ""path"": ""<Gamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""75dae08e-8290-4df8-a224-95bbbaf8f6db"",
                     ""path"": ""<Mouse>/position"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""mouse_position"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1ef26aef-aa2c-487b-b0e4-dcb0f602cd02"",
+                    ""path"": ""<Gamepad>/rightStick"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -340,39 +379,6 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""action"": ""attack"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""8cb04ee4-a6e6-4695-a2db-e6c2346f4c04"",
-                    ""path"": ""<Keyboard>/x"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""close_game"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""c6d99267-51dd-4f87-8fa5-90ae5e98cfd9"",
-                    ""path"": ""<Keyboard>/delete"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""return_to_main"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""cc8e165c-8129-45e2-80a7-1fa204612e77"",
-                    ""path"": ""<Keyboard>/r"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""reload"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -387,9 +393,6 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         m_Player_pause = m_Player.FindAction("pause", throwIfNotFound: true);
         m_Player_mouse_position = m_Player.FindAction("mouse_position", throwIfNotFound: true);
         m_Player_attack = m_Player.FindAction("attack", throwIfNotFound: true);
-        m_Player_close_game = m_Player.FindAction("close_game", throwIfNotFound: true);
-        m_Player_return_to_main = m_Player.FindAction("return_to_main", throwIfNotFound: true);
-        m_Player_reload = m_Player.FindAction("reload", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -457,9 +460,6 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_pause;
     private readonly InputAction m_Player_mouse_position;
     private readonly InputAction m_Player_attack;
-    private readonly InputAction m_Player_close_game;
-    private readonly InputAction m_Player_return_to_main;
-    private readonly InputAction m_Player_reload;
     public struct PlayerActions
     {
         private @InputActions m_Wrapper;
@@ -470,9 +470,6 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         public InputAction @pause => m_Wrapper.m_Player_pause;
         public InputAction @mouse_position => m_Wrapper.m_Player_mouse_position;
         public InputAction @attack => m_Wrapper.m_Player_attack;
-        public InputAction @close_game => m_Wrapper.m_Player_close_game;
-        public InputAction @return_to_main => m_Wrapper.m_Player_return_to_main;
-        public InputAction @reload => m_Wrapper.m_Player_reload;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -500,15 +497,6 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
             @attack.started += instance.OnAttack;
             @attack.performed += instance.OnAttack;
             @attack.canceled += instance.OnAttack;
-            @close_game.started += instance.OnClose_game;
-            @close_game.performed += instance.OnClose_game;
-            @close_game.canceled += instance.OnClose_game;
-            @return_to_main.started += instance.OnReturn_to_main;
-            @return_to_main.performed += instance.OnReturn_to_main;
-            @return_to_main.canceled += instance.OnReturn_to_main;
-            @reload.started += instance.OnReload;
-            @reload.performed += instance.OnReload;
-            @reload.canceled += instance.OnReload;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -531,15 +519,6 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
             @attack.started -= instance.OnAttack;
             @attack.performed -= instance.OnAttack;
             @attack.canceled -= instance.OnAttack;
-            @close_game.started -= instance.OnClose_game;
-            @close_game.performed -= instance.OnClose_game;
-            @close_game.canceled -= instance.OnClose_game;
-            @return_to_main.started -= instance.OnReturn_to_main;
-            @return_to_main.performed -= instance.OnReturn_to_main;
-            @return_to_main.canceled -= instance.OnReturn_to_main;
-            @reload.started -= instance.OnReload;
-            @reload.performed -= instance.OnReload;
-            @reload.canceled -= instance.OnReload;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -565,8 +544,5 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         void OnPause(InputAction.CallbackContext context);
         void OnMouse_position(InputAction.CallbackContext context);
         void OnAttack(InputAction.CallbackContext context);
-        void OnClose_game(InputAction.CallbackContext context);
-        void OnReturn_to_main(InputAction.CallbackContext context);
-        void OnReload(InputAction.CallbackContext context);
     }
 }

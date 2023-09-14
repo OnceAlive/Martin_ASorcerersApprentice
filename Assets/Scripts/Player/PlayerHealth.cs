@@ -1,13 +1,15 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
     [SerializeField] private int maxHealth = 15;
     [SerializeField] private float knockbackThrustAmount = .1f;
     [SerializeField] private float damageRecoveryTime = 1f;
+    [SerializeField] private GameObject deathMenu;
 
-    private int currentHealth;
+    private static int currentHealth;
     private bool canTakeDamage = true;
 
     private Knockback knockback;
@@ -15,10 +17,15 @@ public class PlayerHealth : MonoBehaviour
     
     private void Start()
     {
-        GameObject player = GameObject.FindGameObjectWithTag(Tags.T_Player);     
+        GameObject player = GameObject.FindGameObjectWithTag(Tags.T_Player);
         Physics2D.IgnoreCollision(player.GetComponent<Collider2D>(), GameObject.FindGameObjectWithTag(Tags.T_MonsterBlocker).GetComponent<Collider2D>());
-        currentHealth = maxHealth;
+        if (!initialized)
+        {
+            currentHealth = maxHealth;
+            initialized = true;
+        }
     }
+    private static bool initialized = false;
     
     private void Awake()
     {
@@ -57,6 +64,13 @@ public class PlayerHealth : MonoBehaviour
         StartCoroutine(flash.FlashRoutine());
         canTakeDamage = false;
         currentHealth -= damageAmount;
+        if (currentHealth <= 0)
+        {
+            currentHealth = 0;
+            Time.timeScale = 0f;
+            deathMenu.SetActive(true);
+            //TODO: Game Over
+        }
         StartCoroutine(DamageRecoverRoutine());
     }
 

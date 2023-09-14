@@ -5,7 +5,6 @@ public class PauseMenu : MonoBehaviour
 {
     
     [SerializeField] private GameObject healthBar;
-    [SerializeField] private GameObject player;
     public static bool IsPaused = false;
     
     public void TogglePause()
@@ -24,6 +23,5 @@ public class PauseMenu : MonoBehaviour
             Time.timeScale = 0f;
             IsPaused = true;
         }
-       
     }
 }

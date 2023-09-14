@@ -14,6 +14,7 @@ public class MenuButtons : MonoBehaviour
     public void OnClickPlay()
     {
         SceneManager.LoadScene("Overworld");
+        Time.timeScale = 1f;
     }
 
     public void ReturnToMainMenu()

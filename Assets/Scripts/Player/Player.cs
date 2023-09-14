@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -12,6 +13,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float dashCooldown = 1.5f;
     private Vector2 movementInput = Vector2.zero;
     private PlayerInput playerInput;
+    public event EventHandler<float> OnDashStarted;
     
     private RaycastHit2D hit;
     private BoxCollider2D boxCollider;
@@ -99,6 +101,8 @@ public class Player : MonoBehaviour
 
     private IEnumerator EndDashRoutine()
     {
+        EventHandler<float> eventHandler = OnDashStarted;
+        eventHandler?.Invoke(this, dashCooldown + dashTime);
         GetComponent<BoxCollider2D>().enabled = false;
         yield return new WaitForSeconds(dashTime);
         movementSpeed /= dashSpeed;

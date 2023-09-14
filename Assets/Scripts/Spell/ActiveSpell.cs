@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -10,6 +11,8 @@ public class ActiveSpell : MonoBehaviour
     private int activeSlotIndexNumber = 0;
 
     [SerializeField] private MonoBehaviour currentActiveSpell;
+    public event EventHandler<float> OnAttackStarted;
+    public event EventHandler<Spell> OnSpellChanged; 
     
     private bool isAttacking = false;
     private float timeBetweenAttacks;
@@ -49,6 +52,8 @@ public class ActiveSpell : MonoBehaviour
 
     public void NewSpell(MonoBehaviour newSpell)
     {
+        EventHandler<Spell> handler = OnSpellChanged;
+        handler?.Invoke(this, newSpell as Spell);
         currentActiveSpell = newSpell;
         AttackCooldown();
         timeBetweenAttacks = (currentActiveSpell as Spell).GetSpellInfo().spellCooldown;
@@ -56,6 +61,8 @@ public class ActiveSpell : MonoBehaviour
 
     private IEnumerator TimeBetweenAttacksRoutine()
     {
+        EventHandler<float> handler = OnAttackStarted;
+        handler?.Invoke(this, timeBetweenAttacks);
         yield return new WaitForSeconds(timeBetweenAttacks);
         isAttacking = false;
     }

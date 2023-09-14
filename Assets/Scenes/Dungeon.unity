@@ -128872,6 +128872,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6275422888542061110, guid: 3e7f0af92f989324d9e039e8c507c0d5, type: 3}
+      propertyPath: deathMenu
+      value: 
+      objectReference: {fileID: 1729087320}
     - target: {fileID: 8054884428113965160, guid: 3e7f0af92f989324d9e039e8c507c0d5, type: 3}
       propertyPath: pauseMenu
       value: 
@@ -129005,8 +129009,12 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2975906314589836214, guid: 395ea7e3776a04d1bb5ffb4a8d227aa3, type: 3}
-      propertyPath: m_IsActive
+    - target: {fileID: 3020510852870982076, guid: 395ea7e3776a04d1bb5ffb4a8d227aa3, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3020510852870982076, guid: 395ea7e3776a04d1bb5ffb4a8d227aa3, type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5355431779091462290, guid: 395ea7e3776a04d1bb5ffb4a8d227aa3, type: 3}
@@ -129089,6 +129097,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7383848979830107304, guid: 395ea7e3776a04d1bb5ffb4a8d227aa3, type: 3}
+      propertyPath: activeSpell
+      value: 
+      objectReference: {fileID: 1657203186}
+    - target: {fileID: 8192179743164747273, guid: 395ea7e3776a04d1bb5ffb4a8d227aa3, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8192179743164747273, guid: 395ea7e3776a04d1bb5ffb4a8d227aa3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8196075987992905408, guid: 395ea7e3776a04d1bb5ffb4a8d227aa3, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -129097,6 +129117,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8218314551086250543, guid: 395ea7e3776a04d1bb5ffb4a8d227aa3, type: 3}
+      propertyPath: activeSpell
+      value: 
+      objectReference: {fileID: 1657203186}
     - target: {fileID: 8511505843209636202, guid: 395ea7e3776a04d1bb5ffb4a8d227aa3, type: 3}
       propertyPath: m_Name
       value: UI
@@ -129106,6 +129130,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 395ea7e3776a04d1bb5ffb4a8d227aa3, type: 3}
+--- !u!1 &1729087320 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4935477606567548008, guid: 395ea7e3776a04d1bb5ffb4a8d227aa3, type: 3}
+  m_PrefabInstance: {fileID: 1729087319}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1895338097
 GameObject:
   m_ObjectHideFlags: 0
