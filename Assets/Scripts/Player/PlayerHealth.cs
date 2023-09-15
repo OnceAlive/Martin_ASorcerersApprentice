@@ -8,12 +8,14 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private float knockbackThrustAmount = .1f;
     [SerializeField] private float damageRecoveryTime = 1f;
     [SerializeField] private GameObject deathMenu;
+    [SerializeField] private AudioClip deathSound;
 
     private static int currentHealth;
     private bool canTakeDamage = true;
 
     private Knockback knockback;
     private Flash flash;
+    private static bool initialized = false;
     
     private void Start()
     {
@@ -25,7 +27,6 @@ public class PlayerHealth : MonoBehaviour
             initialized = true;
         }
     }
-    private static bool initialized = false;
     
     private void Awake()
     {
@@ -66,9 +67,11 @@ public class PlayerHealth : MonoBehaviour
         currentHealth -= damageAmount;
         if (currentHealth <= 0)
         {
+            AudioSource.PlayClipAtPoint(deathSound, this.transform.position);
             currentHealth = 0;
             Time.timeScale = 0f;
             deathMenu.SetActive(true);
+            initialized = false;
             //TODO: Game Over
         }
         StartCoroutine(DamageRecoverRoutine());

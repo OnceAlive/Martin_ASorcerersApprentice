@@ -77,7 +77,8 @@ public class ActiveSpell : MonoBehaviour
         if(!isAttacking)
         {
             AttackCooldown();
-
+            currentActiveSpell.GetComponent<AudioSource>()?.Play();
+            
             (currentActiveSpell as Spell).Attack();
         }
     }

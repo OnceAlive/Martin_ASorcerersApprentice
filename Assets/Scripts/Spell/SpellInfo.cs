@@ -7,4 +7,5 @@ public class SpellInfo : ScriptableObject
     public float spellCooldown;
     public float spellDamage;
     public float spellRange;
+    public AudioClip sound;
 }

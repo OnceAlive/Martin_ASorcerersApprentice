@@ -16,3 +16,4 @@ MonoBehaviour:
   spellCooldown: 3
   spellDamage: 3
   spellRange: 2
+  sound: {fileID: 8300000, guid: fb098f37ca8b4724e90310e8db900fd7, type: 3}
