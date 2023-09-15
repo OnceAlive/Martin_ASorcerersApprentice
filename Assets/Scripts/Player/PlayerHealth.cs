@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -34,10 +35,9 @@ public class PlayerHealth : MonoBehaviour
         flash = GetComponent<Flash>();
     }
 
-    private void OnCollisionStay2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         EnemyHealth enemy = collision.gameObject.GetComponent<EnemyHealth>();
-        Debug.Log(enemy);
         if (enemy) 
         {
             TakeDamage(1, collision.gameObject.transform);

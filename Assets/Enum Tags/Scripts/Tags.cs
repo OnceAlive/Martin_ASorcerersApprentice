@@ -11,4 +11,5 @@ public const string T_GameInput = @"GameInput";
 public const string T_MonsterBlocker = @"MonsterBlocker";
 public const string T_Blocker = @"Blocker";
 public const string T_DeathMenu = @"DeathMenu";
+public const string T_Heart = @"Heart";
 }
