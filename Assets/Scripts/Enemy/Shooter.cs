@@ -34,7 +34,11 @@ public class Shooter : MonoBehaviour, IEnemy
     {
         isShooting=true;
         float timeBetweenProjectiles = stagger ? timeBetweenBursts / projectilesPerBurst : 0f;
-        
+
+        if (GetComponent<AudioSource>())
+        {
+            GetComponent<AudioSource>()?.Play();            
+        }
         TargetConeOfInfluence(out float startAngle, out float currentAngle, out float angleStep, out float endAngle);
 
         for(int i = 0; i < burstCount; i++)

@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36810840a590d4440b4e7fa7ecfa9903, type: 3}
   m_Name: Shockwave
   m_EditorClassIdentifier: 
-  spellPrefab: {fileID: 8989137105132784067, guid: 855eebaa7bba0fa499b4f8b3f11c502f, type: 3}
+  spellSprite: {fileID: -1188064026966278998, guid: 2426fa8e9a042924f9894b80a17868e9, type: 3}
   spellCooldown: 3
-  spellDamage: 2
+  spellDamage: 3
   spellRange: 1.5
+  sound: {fileID: 0}
