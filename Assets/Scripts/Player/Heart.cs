@@ -5,8 +5,16 @@ using UnityEngine;
 
 public class Heart : MonoBehaviour
 {
-    private void OnCollisionEnter2D(Collision2D other)
+    [SerializeField] private int healthAmount = 1;
+    
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Hallo");
+        Debug.Log("Heart picked up");
+        if (other.CompareTag(Tags.T_Player))
+        {
+            PlayerHealth playerHealth = other.GetComponent<PlayerHealth>();
+            playerHealth.Heal(healthAmount);
+            Destroy(gameObject);
+        }
     }
 }

@@ -76,6 +76,15 @@ public class PlayerHealth : MonoBehaviour
         }
         StartCoroutine(DamageRecoverRoutine());
     }
+    
+    public void Heal(int healAmount)
+    {
+        currentHealth += healAmount;
+        if (currentHealth > maxHealth)
+        {
+            currentHealth = maxHealth;
+        }
+    }
 
     private IEnumerator DamageRecoverRoutine()
     {

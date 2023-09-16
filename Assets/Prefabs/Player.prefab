@@ -276,6 +276,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 4092720554761132636}
+  playerCollider: {fileID: 8882965110539617446}
 --- !u!1 &3393580753521345507
 GameObject:
   m_ObjectHideFlags: 0
@@ -903,6 +904,7 @@ MonoBehaviour:
   dashSpeed: 4
   dashTime: 0.2
   dashCooldown: 1.5
+  martinRenderer: {fileID: 89615458105851525}
 --- !u!114 &3380265955068833877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -955,7 +957,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 1
+  m_CollisionDetection: 0
   m_Constraints: 4
 --- !u!61 &8882965110539617446
 BoxCollider2D:
@@ -1018,6 +1020,7 @@ MonoBehaviour:
   knockbackThrustAmount: 0.1
   damageRecoveryTime: 1
   deathMenu: {fileID: 0}
+  deathSound: {fileID: 8300000, guid: 976db46a36f35f545abe80b2ca90d38a, type: 3}
 --- !u!114 &4883901368895073512
 MonoBehaviour:
   m_ObjectHideFlags: 0

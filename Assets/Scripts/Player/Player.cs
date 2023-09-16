@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float dashSpeed = 4f;
     [SerializeField] private float dashTime = .2f;
     [SerializeField] private float dashCooldown = 1.5f;
+    [SerializeField] private SpriteRenderer martinRenderer;
     private Vector2 movementInput = Vector2.zero;
     private PlayerInput playerInput;
     public event EventHandler<float> OnDashStarted;
@@ -54,16 +55,6 @@ public class Player : MonoBehaviour
     {
         Dash();
     }
-
-    public void OnPause()
-    {
-        GetComponent<PlayerInput>().enabled = false;
-    }
-    
-    public void OnUnpause()
-    {
-        GetComponent<PlayerInput>().enabled = true;
-    }
     
     private void HandlePlayerMovement()
     {
@@ -72,6 +63,7 @@ public class Player : MonoBehaviour
             return;
         }
 
+        /*
         hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0, new Vector2(0, movementInput.y), Mathf.Abs(movementInput.y * Time.deltaTime), LayerMask.GetMask("Actor", "Blocking"));
         if (hit.collider == null)
         {
@@ -82,9 +74,9 @@ public class Player : MonoBehaviour
         if (hit.collider == null)
         {
             transform.Translate(movementInput.x * (Time.deltaTime * movementSpeed), 0, 0);
-        }
+        }*/
 
-        //transform.Translate(movementVector * (Time.deltaTime * movementSpeed));
+        transform.Translate(movementInput * (Time.deltaTime * movementSpeed));
     }
 
     private void Dash()
@@ -104,8 +96,10 @@ public class Player : MonoBehaviour
         EventHandler<float> eventHandler = OnDashStarted;
         eventHandler?.Invoke(this, dashCooldown + dashTime);
         GetComponent<BoxCollider2D>().enabled = false;
+        martinRenderer.color = new Color(martinRenderer.color.r, martinRenderer.color.g, martinRenderer.color.b, .5f);
         yield return new WaitForSeconds(dashTime);
         movementSpeed /= dashSpeed;
+        martinRenderer.color = new Color(martinRenderer.color.r, martinRenderer.color.g, martinRenderer.color.b, 1f);
         GetComponent<BoxCollider2D>().enabled = true;
         yield return new WaitForSeconds(dashCooldown);
         canDash = true;

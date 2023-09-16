@@ -4,7 +4,9 @@ using UnityEngine.InputSystem;
 public class MouseFollow : MonoBehaviour
 {
     [SerializeField] private Transform playerTransform;
+    [SerializeField] private BoxCollider2D playerCollider;
     private Vector3 mousePosition;
+    
     
     public void OnMouseMovement(InputAction.CallbackContext context)
     {
@@ -25,10 +27,12 @@ public class MouseFollow : MonoBehaviour
         if(direction.x < 0)
         {
             playerTransform.localScale = new Vector3(1, 1, 1);
+            playerCollider.offset = new Vector2(-0.05061573f, 0.1555966f);
         }
         else
         {
             playerTransform.localScale = new Vector3(-1, 1, 1);
+            playerCollider.offset = new Vector2(0.05061573f, 0.1555966f);
         }
 
         transform.right = -direction;

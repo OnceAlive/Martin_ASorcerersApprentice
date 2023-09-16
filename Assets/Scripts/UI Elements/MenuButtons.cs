@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class MenuButtons : MonoBehaviour
 {
+    [SerializeField] private GameObject storyText;
+    
     public void QuitGame()
     {
         if (PauseMenu.IsPaused)
@@ -15,8 +17,9 @@ public class MenuButtons : MonoBehaviour
 
     public void OnClickPlay()
     {
-        SceneManager.LoadScene("Overworld");
-        Time.timeScale = 1f;
+        
+        storyText.SetActive(true);
+        gameObject.SetActive(false);
     }
 
     public void ReturnToMainMenu()
