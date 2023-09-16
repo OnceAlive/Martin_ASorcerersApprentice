@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Fire
   m_EditorClassIdentifier: 
   spellSprite: {fileID: -685809373699070411, guid: 4045da1ba17f118418d77bf6f47095df, type: 3}
-  spellCooldown: 1
-  spellDamage: 1
+  spellCooldown: 1.5
+  spellDamage: 0.2
   spellRange: 1
+  sound: {fileID: 0}

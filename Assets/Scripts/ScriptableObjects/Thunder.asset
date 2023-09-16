@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Thunder
   m_EditorClassIdentifier: 
   spellSprite: {fileID: 8150355097493328531, guid: 95c30a02a57365645bff5b6394e9ea0b, type: 3}
-  spellCooldown: 3
-  spellDamage: 3
-  spellRange: 2
+  spellCooldown: 2
+  spellDamage: 2
+  spellRange: 1.5
   sound: {fileID: 8300000, guid: fb098f37ca8b4724e90310e8db900fd7, type: 3}

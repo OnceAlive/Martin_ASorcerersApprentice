@@ -2,10 +2,11 @@ using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 
 public class MenuButtons : MonoBehaviour
 {
-    [SerializeField] private GameObject storyText;
+    [FormerlySerializedAs("storyText")] [SerializeField] private GameObject storyScreen;
     
     public void QuitGame()
     {
@@ -17,8 +18,8 @@ public class MenuButtons : MonoBehaviour
 
     public void OnClickPlay()
     {
-        
-        storyText.SetActive(true);
+        Time.timeScale = 1;
+        storyScreen.SetActive(true);
         gameObject.SetActive(false);
     }
 
@@ -26,6 +27,7 @@ public class MenuButtons : MonoBehaviour
     {
         if (PauseMenu.IsPaused)
         {
+            GameObject.FindGameObjectWithTag(Tags.T_Player).GetComponent<PlayerHealth>().Uninitialize();
             SceneManager.LoadScene("Main_Menu");   
         }
     }

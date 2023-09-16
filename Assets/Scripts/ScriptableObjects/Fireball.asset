@@ -15,4 +15,5 @@ MonoBehaviour:
   spellSprite: {fileID: -4812309886329969229, guid: fabcde19debc1ce4192b99bb3ca5500c, type: 3}
   spellCooldown: 1
   spellDamage: 1
-  spellRange: 2
+  spellRange: 3
+  sound: {fileID: 0}

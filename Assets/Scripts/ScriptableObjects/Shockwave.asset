@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spellSprite: {fileID: -1188064026966278998, guid: 2426fa8e9a042924f9894b80a17868e9, type: 3}
   spellCooldown: 3
-  spellDamage: 2
+  spellDamage: 3
   spellRange: 1.5
+  sound: {fileID: 0}

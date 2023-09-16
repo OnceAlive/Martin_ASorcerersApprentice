@@ -5,6 +5,7 @@ public class Projectile : MonoBehaviour
     [SerializeField] private float projectileSpeed;
     [SerializeField] private float projectileRange = 10f;
     [SerializeField] private bool isEnemyProjectile = false;
+    [SerializeField] private float damage = 1;
     
     private Vector2 startPosition;
     
@@ -37,8 +38,8 @@ public class Projectile : MonoBehaviour
         {
             if((player && isEnemyProjectile) || (enemyHealth && !isEnemyProjectile))
             {
-                enemyHealth?.TakeDamage(1);
-                player?.TakeDamage(1, transform);
+                enemyHealth?.TakeDamage(damage);
+                player?.TakeDamage(damage, transform);
                 Destroy(gameObject);
             }
 

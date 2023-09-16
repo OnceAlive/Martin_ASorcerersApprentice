@@ -11,12 +11,13 @@ public class StoryText : MonoBehaviour
      private float fadeDuration = 1f;
      private Color initialColor;
      private Color targetColor;
-     
+
      private void Start()
      {
+         StopAllCoroutines();
          initialColor = storyText.color;
-         targetColor = new Color(initialColor.r, initialColor.g, initialColor.b, 1f);
          
+         targetColor = new Color(initialColor.r, initialColor.g, initialColor.b, 1f);
          StartCoroutine(StoryText1());
      }
 
@@ -45,7 +46,7 @@ public class StoryText : MonoBehaviour
     IEnumerator StoryText1()
     {
         StartCoroutine(FadeIn());
-        storyText.text = "Es war einmal in einem mystischen Land VON ELDORIA, wo ein weiser und mächtiger Zauberer namens ALARIC lebte.";
+        storyText.text = "Es war einmal in einem mystischen Land von ELDORIA, wo ein weiser und maechtiger Zauberer namens ALARIC lebte.";
         yield return new WaitForSeconds(5f);
         StartCoroutine(FadeOut());
         yield return new WaitForSeconds(3f);
@@ -55,7 +56,7 @@ public class StoryText : MonoBehaviour
     IEnumerator StoryText2()
     {
         StartCoroutine(FadeIn());
-        storyText.text = "ALARIC war nah und fern bekannt für seine extraordinären magischen Fähigkeiten und seiner Hingabe das Reich vor allen möglichen dunklen Mächten zu schützen.";
+        storyText.text = "ALARIC war nah und fern bekannt fuer seine extraordinaeren magischen Fähigkeiten und seiner Hingabe das Reich vor allen moeglichen dunklen Maechten zu schützen.";
         yield return new WaitForSeconds(5f);
         StartCoroutine(FadeOut());
         yield return new WaitForSeconds(3f);
@@ -65,7 +66,7 @@ public class StoryText : MonoBehaviour
     IEnumerator StoryText3()
     {
         StartCoroutine(FadeIn());
-        storyText.text = "Er hatte viele Jahre damit verbracht, seine Kräfte einem jungen und erpichten Lehrling, namens Martin, beizubringen.";
+        storyText.text = "Er hatte viele Jahre damit verbracht, seine Kraefte einem jungen und erpichten Lehrling, namens Martin, beizubringen.";
         yield return new WaitForSeconds(5f);
         StartCoroutine(FadeOut());
         yield return new WaitForSeconds(3f);
@@ -75,7 +76,7 @@ public class StoryText : MonoBehaviour
     IEnumerator StoryText4()
     {
         StartCoroutine(FadeIn());
-        storyText.text = "Martin war ein aufgeweckter und zielstrebiger junger Mann mit einer natürlichen Affinität für Magie.";
+        storyText.text = "Martin war ein aufgeweckter und zielstrebiger junger Mann mit einer natuerlichen Affinitaet für Magie.";
         yield return new WaitForSeconds(5f);
         StartCoroutine(FadeOut());
         yield return new WaitForSeconds(3f);
@@ -105,7 +106,7 @@ public class StoryText : MonoBehaviour
     IEnumerator StoryText7()
     {
         StartCoroutine(FadeIn());
-        storyText.text = "Eines schicksalhaften Tages, als die Sonne den Himmel in orangen und pinken Farbtönen malte, begab sich ALARIC auf eine gefährliche Suche, um einen Riss zu schließen, der sich in der dunkelsten Ecke des magischen Reiches geöffnet hatte. ";
+        storyText.text = "Eines schicksalhaften Tages, als die Sonne den Himmel in orangen und pinken Farbtoenen malte, begab sich ALARIC auf eine gefährliche Suche, um einen Riss zu schließen, der sich in der dunkelsten Ecke des magischen Reiches geoeffnet hatte. ";
         yield return new WaitForSeconds(5f);
         StartCoroutine(FadeOut());
         yield return new WaitForSeconds(3f);
@@ -115,7 +116,7 @@ public class StoryText : MonoBehaviour
     IEnumerator StoryText8()
     {
         StartCoroutine(FadeIn());
-        storyText.text = "Er ließ eine detaillierte Anweisung für Martin zurück, erklärend, dass dies eine Aufgabe sein, die nur er übernehmen könne und er mehrere Wochen lang weg sein würde.";
+        storyText.text = "Er ließ eine detaillierte Anweisung für Martin zurueck, erklaerend, dass dies eine Aufgabe sei, die nur er uebernehmen koenne und er mehrere Wochen lang weg sein wuerde.";
         yield return new WaitForSeconds(5f);
         StartCoroutine(FadeOut());
         yield return new WaitForSeconds(3f);
@@ -125,7 +126,7 @@ public class StoryText : MonoBehaviour
     IEnumerator StoryText9()
     {
         StartCoroutine(FadeIn());
-        storyText.text = "Aus Wochen wurden Monate und weiterhin gab es kein Zeichen von ALARIC's Rückkehr.";
+        storyText.text = "Aus Wochen wurden Monate und weiterhin gab es kein Zeichen von ALARIC's Rueckkehr.";
         yield return new WaitForSeconds(5f);
         StartCoroutine(FadeOut());
         yield return new WaitForSeconds(3f);
@@ -135,7 +136,7 @@ public class StoryText : MonoBehaviour
     IEnumerator StoryText10()
     {
         StartCoroutine(FadeIn());
-        storyText.text = "ELDORIA's Bewohner wurden ängstlich und Gerüchte verbreiteten sich wie Lauffeuer durch das Land.";
+        storyText.text = "ELDORIA's Bewohner wurden aengstlich und Geruechte verbreiteten sich wie Lauffeuer durch das Land.";
         yield return new WaitForSeconds(5f);
         StartCoroutine(FadeOut());
         yield return new WaitForSeconds(3f);
@@ -145,7 +146,7 @@ public class StoryText : MonoBehaviour
     IEnumerator StoryText11()
     {
         StartCoroutine(FadeIn());
-        storyText.text = "Jemand flüsterte, dass ALARIC sein Schicksal in dem Riss gefunden hätte, während andere daran glaubten, dass er seine Pflichten aufgegeben hat.";
+        storyText.text = "Jemand fluesterte, dass ALARIC sein Schicksal in dem Riss gefunden haette, waehrend andere daran glaubten, dass er seine Pflichten aufgegeben hat.";
         yield return new WaitForSeconds(5f);
         StartCoroutine(FadeOut());
         yield return new WaitForSeconds(3f);
@@ -155,7 +156,7 @@ public class StoryText : MonoBehaviour
     IEnumerator StoryText12()
     {
         StartCoroutine(FadeIn());
-        storyText.text = "Martin jedoch weigerte sich, eine der beiden Theorien zu glauben. Er kannte seinen Mentor besser als irgendjemand und er war sich sicher, dass er seine Heimat niemals im Stich lassen würde.";
+        storyText.text = "Martin jedoch weigerte sich, eine der beiden Theorien zu glauben. Er kannte seinen Mentor besser als irgendjemand und er war sich sicher, dass er seine Heimat niemals im Stich lassen wuerde.";
         yield return new WaitForSeconds(5f);
         StartCoroutine(FadeOut());
         yield return new WaitForSeconds(3f);

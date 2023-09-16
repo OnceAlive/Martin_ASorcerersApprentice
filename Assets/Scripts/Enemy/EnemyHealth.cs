@@ -6,7 +6,7 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField] private int startingHealth = 3;
     [SerializeField] private GameObject heart;
 
-    private int currentHealth;
+    private float currentHealth;
     private Knockback knockback;
     private Flash flash;
 
@@ -21,7 +21,7 @@ public class EnemyHealth : MonoBehaviour
         currentHealth = startingHealth;
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(float damage)
     {
         currentHealth -= damage;
         knockback.GetKnockedBack(GameObject.FindGameObjectWithTag(Tags.T_Player).transform, 2f);

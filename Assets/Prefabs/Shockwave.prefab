@@ -164,3 +164,4 @@ MonoBehaviour:
   projectileSpeed: 2
   projectileRange: 10
   isEnemyProjectile: 0
+  damage: 3

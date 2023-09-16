@@ -5,13 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
-    [SerializeField] private int maxHealth = 15;
+    [SerializeField] private float maxHealth = 15;
     [SerializeField] private float knockbackThrustAmount = .1f;
     [SerializeField] private float damageRecoveryTime = 1f;
     [SerializeField] private GameObject deathMenu;
     [SerializeField] private AudioClip deathSound;
 
-    private static int currentHealth;
+    private static float currentHealth;
     private bool canTakeDamage = true;
 
     private Knockback knockback;
@@ -44,17 +44,17 @@ public class PlayerHealth : MonoBehaviour
         }
     }
     
-    public int GetCurrentHealth()
+    public float GetCurrentHealth()
     {
         return currentHealth;
     }
     
-    public int GetMaxHealth()
+    public float GetMaxHealth()
     {
         return maxHealth;
     }
 
-    public void TakeDamage(int damageAmount, Transform hitTransform)
+    public void TakeDamage(float damageAmount, Transform hitTransform)
     {
         if(!canTakeDamage)
         {
@@ -90,5 +90,10 @@ public class PlayerHealth : MonoBehaviour
     {
         yield return new WaitForSeconds(damageRecoveryTime);
         canTakeDamage = true;
+    }
+
+    public void Uninitialize()
+    {
+        initialized = false;
     }
 }

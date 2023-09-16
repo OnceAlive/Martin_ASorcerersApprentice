@@ -81,7 +81,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 061de05dcefaacf479411746a46dafee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 3
+  startingHealth: 5
   heart: {fileID: 4392969738474320896, guid: bfbe009ebae2f3747a1172e689002772, type: 3}
 --- !u!114 &5178076466551691376
 MonoBehaviour:
