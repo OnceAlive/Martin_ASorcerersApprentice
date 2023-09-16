@@ -82,6 +82,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 3
+  heart: {fileID: 4392969738474320896, guid: bfbe009ebae2f3747a1172e689002772, type: 3}
 --- !u!114 &5178076466551691376
 MonoBehaviour:
   m_ObjectHideFlags: 0

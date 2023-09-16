@@ -9,7 +9,6 @@ public class Heart : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Heart picked up");
         if (other.CompareTag(Tags.T_Player))
         {
             PlayerHealth playerHealth = other.GetComponent<PlayerHealth>();
