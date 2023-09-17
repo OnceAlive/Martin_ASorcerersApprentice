@@ -41,7 +41,10 @@ public class EnemyHealth : MonoBehaviour
         {
             if (Random.Range(0, 9) == 0)
             {
-                Instantiate(heart, this.transform.position, Quaternion.identity);   
+                if (heart)
+                {
+                    Instantiate(heart, this.transform.position, Quaternion.identity);                    
+                }   
             }
             Destroy(gameObject);
         }

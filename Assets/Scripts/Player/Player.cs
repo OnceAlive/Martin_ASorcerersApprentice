@@ -19,8 +19,6 @@ public class Player : MonoBehaviour
     private RaycastHit2D hit;
     private BoxCollider2D boxCollider;
 
-    public static Player INSTANCE;
-
     private Knockback knockback;
     private bool canDash = true;
 
@@ -32,11 +30,7 @@ public class Player : MonoBehaviour
 
     private void Awake()
     {
-        if(INSTANCE == null)
-        {
-            INSTANCE = this;
-        }
-
+        Time.timeScale = 1;
         knockback = GetComponent<Knockback>();
     }
 
