@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,7 +8,7 @@ public class Cooldownbar : MonoBehaviour
     private Slider cooldownbarSlider;
     [SerializeField] private bool isAttack = false;
     [SerializeField] private ActiveSpell activeSpell;
-    // Start is called before the first frame update
+    
     void Start()
     {
         cooldownbarSlider = GetComponent<Slider>();

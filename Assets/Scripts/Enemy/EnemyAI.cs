@@ -59,7 +59,7 @@ public class EnemyAI : MonoBehaviour
         timeRoaming += Time.deltaTime;
         enemyPathfinding.MoveTo(roamPosition);
 
-        if(Vector2.Distance(transform.position, Player.INSTANCE.transform.position) <= attackRange)
+        if(Vector2.Distance(transform.position, GameObject.FindWithTag(Tags.T_Player).transform.position) <= attackRange)
         {
             state = State.ATTACKING;
         }
@@ -77,7 +77,7 @@ public class EnemyAI : MonoBehaviour
             canAttack = false;
             (enemyType as IEnemy).Shoot();
             StartCoroutine(AttackCooldownRoutine());
-            float distance = Vector2.Distance(transform.position, Player.INSTANCE.transform.position);
+            float distance = Vector2.Distance(transform.position, GameObject.FindWithTag(Tags.T_Player).transform.position);
             if (distance > attackRange)
             {
                 state = State.ROAMING;

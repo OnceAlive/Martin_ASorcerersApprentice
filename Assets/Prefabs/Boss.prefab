@@ -81,7 +81,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 061de05dcefaacf479411746a46dafee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 300
+  startingHealth: 150
   heart: {fileID: 0}
 --- !u!114 &785531093389101628
 MonoBehaviour:
@@ -251,9 +251,9 @@ MonoBehaviour:
   bullet: {fileID: 8989137105132784067, guid: 0b1062a9dce5f174b8185a43194a0c9a, type: 3}
   bulletMoveSpeed: 1
   burstCount: 5
-  projectilesPerBurst: 12
+  projectilesPerBurst: 20
   angleSpread: 359
-  startingDistance: 1.04
+  startingDistance: 0.5
   timeBetweenBursts: 0.3
   restTime: 0.5
   stagger: 0
